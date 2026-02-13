@@ -1,0 +1,2575 @@
+body{
+    margin: 0px;
+    /* display:flex; */
+    background-color: rgba(185, 185, 185, 0.046);
+}
+
+@keyframes beginningAni {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.onclickSizeBarHome {
+    background-color: white;
+    box-shadow: 0px 2px 9px rgba(151, 151, 151, 0.393);
+    /* color: rgb(43, 150, 98); */
+}
+
+.line {
+    position: relative;
+    width: 280px;
+    height: 1.3px;
+    background-color: rgba(184, 184, 184, 0.356);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* passPercent_less */
+/* 侧边栏设置 */
+.sideMainBar {
+    position: fixed;
+    width: 280px;
+    height: 927px;
+    background-color: white;
+    /* background-color: rgba(244, 244, 244, 0.502); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    margin-left: 0.1%;
+    border: 0.3px solid rgba(199, 199, 199, 0.475);
+    box-shadow: 0px 1px 10px rgba(161, 161, 161, 0.596);
+}
+
+/* 头部设置 */
+.sideMainBar .headMainBar {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    /* border-bottom: 1.5px solid rgba(184, 184, 184, 0.356); */
+}
+
+/* logo和文字 */
+.headMainBar .logoAndTextMainBar {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* logo */
+.logoAndTextMainBar .logoMainBar {
+    position: relative;
+    width: 15%;
+    height: 67%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 0.4px solid rgba(41, 41, 41, 0.708);
+}
+
+.logoMainBar img {
+    width: 100%;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.logoMainBar img:hover {
+    transform: rotate(420deg);
+}
+
+/* 名称 */
+.logoAndTextMainBar .nameMainBar {
+    position: relative;
+    width: 82%;
+    height: 100%;
+    /* background-color: rgb(142, 220, 214); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.nameMainBar h1 {
+    font-size: 19px;
+    color: rgb(28, 28, 28);
+    font-weight: 600;
+}
+
+/* 设置 */
+.headMainBar .setMainBar {
+    position: relative;
+    width: 9%;
+    height: 50%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.setMainBar button {
+    position: relative;
+    /* background-color: blueviolet; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: rgba(234, 234, 234, 0.781);
+    transition: 0.3s;
+}
+
+.setMainBar button:hover {
+    border: 0.7px solid rgb(218, 172, 252);
+}
+
+.setMainBar button img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.sideMainBar .searchMainBar {
+    position: relative;
+
+}
+
+.sideMainBar .headInput {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /* background-color: rgb(182, 231, 216); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.headInput .inputMainBar {
+    position: relative;
+    width: 85%;
+    height: 80%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: beginningAni 0.8s ease forwards;
+    visibility: visible;
+}
+
+.inputMainBar input {
+    position: relative;
+    width: 100%;
+    height: 88%;
+    border-radius: 7px;
+    outline: none;
+    border: 0.3px solid rgba(201, 201, 201, 0.795);
+    box-shadow: 0px 0px 4px rgba(172, 172, 172, 0.352);
+    line-height: 50px;
+    padding-left: 14%;
+    transition: 0.3s;
+}
+
+.inputMainBar input:focus {
+    border: 0.3px solid rgba(112, 112, 112, 0.598);
+    animation: inputvivid 1s ease 0s forwards;
+    visibility: visible;
+}
+
+@keyframes inputvivid {
+    0% {
+        box-shadow: 0px 0px 0px;
+    }
+
+    33% {
+        box-shadow: 0px 0px 10px rgba(132, 229, 192, 0.598);
+    }
+
+    66% {
+        box-shadow: 0px 0px 8px rgba(132, 229, 192, 0.598);
+    }
+
+    100% {
+        box-shadow: 0px 0px 4px rgba(132, 229, 192, 0.598);
+    }
+}
+
+
+
+.inputMainBar input::placeholder {
+    color: rgb(103, 103, 103);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.inputMainBar .inputMainBar_button {
+    position: absolute;
+    width: 20%;
+    height: 75%;
+    margin-left: 76%;
+    border-radius: 6px;
+    border: none;
+    background-color: rgba(199, 232, 221, 0.861);
+    box-shadow: 0px 0px 6px rgba(186, 186, 186, 0.468);
+    transition: 0.3s;
+    color: rgb(51, 51, 51);
+}
+
+.inputMainBar .inputMainBar_button:hover {
+    background: linear-gradient(to right, rgba(113, 219, 178, 0.598), rgba(231, 247, 240, 0.598));
+    color: rgb(30, 129, 92);
+    transform: translateY(-1px);
+    box-shadow: 0px 1px 5px rgba(115, 115, 115, 0.468);
+}
+
+.inputMainBar .inputMainBar_button:active {
+    transform: scale(90%);
+
+}
+
+.inputMainBar img {
+    position: absolute;
+    width: 6.5%;
+    height: auto;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -85%;
+    /* top: -0.5px; */
+    margin-top: -2px;
+}
+
+/* 侧边栏第二主栏 */
+.sideMainBar .bodyMainBar {
+    position: relative;
+    /* background-color: rgb(205, 226, 226); */
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 43%;
+
+}
+
+.bodyMainBar .advMainBar {
+    position: relative;
+    width: 85%;
+    height: 55px;
+    /* background: rgb(227, 174, 174); */
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 17px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(157, 157, 157, 0.418);
+    animation: beginningAni 0.8s ease 0.05s forwards;
+    visibility: visible;
+
+    /* 不定期动态 */
+    animation: advMainBar_ani 1.5s ease 1s 1000000 forwards;
+    visibility: visible;
+}
+
+@keyframes advMainBar_ani {
+    0% {
+        box-shadow: 0px 0px 10px rgba(157, 157, 157, 0.418);
+    }
+
+    50% {
+        box-shadow: 2px 1px 23px rgba(140, 83, 204, 0.356);
+    }
+
+    100% {
+        box-shadow: 0px 0px 10px rgba(157, 157, 157, 0.418);
+    }
+}
+
+.advMainBar .advMainBar_leftMainBar {
+    position: relative;
+    width: 50%;
+    height: 75%;
+    /* background-color: beige; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.advMainBar_leftMainBar .imgBar {
+    position: relative;
+    width: 35%;
+    height: 100%;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.imgBar img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.advMainBar_leftMainBar .textBar {
+    position: relative;
+    width: 65%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    line-height: 20px;
+}
+
+.textBar p {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.bodyMainBar .chooseMainBar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.bodyMainBar .chooseMainBar ul {
+    width: 87%;
+    height: auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(211, 211, 238); */
+    /* margin-right: 50px; */
+    gap: 2px;
+    margin: 0px;
+    margin-left: 5px;
+
+}
+
+.bodyMainBar .chooseMainBar ul li {
+    margin: 0px;
+    animation: beginningAni 0.8s ease 0.2s forwards;
+    visibility: visible;
+}
+
+.bodyMainBar .chooseMainBar ul li a {
+    margin: 0px;
+    text-decoration: none;
+}
+
+.bodyMainBar .chooseMainBar ul li button {
+    width: 100%;
+    height: 37px;
+    margin-left: -25px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    /* background-color: white; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: rgba(244, 244, 244, 0.502); */
+    background: none;
+    transition: 0.15s;
+
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 610;
+    color: rgb(83, 82, 82);
+}
+
+.bodyMainBar .chooseMainBar ul li button p {
+    margin-left: 10px;
+
+}
+
+.bodyMainBar .chooseMainBar ul li button:hover {
+    background-color: white;
+    box-shadow: 0px 2px 6px rgba(178, 178, 178, 0.568);
+    color: rgba(77, 14, 148, 0.737);
+}
+
+.bodyMainBar .chooseMainBar ul li button img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+
+}
+
+.bodyMainBar .chooseMainBar ul li button h4 {
+    margin-left: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 610;
+    color: rgb(83, 82, 82);
+}
+
+.chooseMainBar h4 {
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    /* margin: 15px; */
+    color: rgb(123, 122, 122);
+}
+
+/* 底部广告栏 */
+.bodyMainBar .botton_Adv_MainBar {
+    position: relative;
+    width: 92%;
+    height: 180px;
+    background: linear-gradient(to top, white, white, rgba(209, 221, 235, 0.429));
+    margin-top: 250px;
+    border-radius: 3px;
+    text-align: start;
+    /* padding: 4px; */
+    /* padding-left: 20px; */
+    justify-content: flex-start;
+    /* padding-top: 10px; */
+    flex-direction: column;
+    color: rgb(50, 50, 50);
+    /* line-height: 4px; */
+    /* gap: 4px; */
+    text-align: justify;
+    box-shadow: 0px 5px 6px rgba(110, 110, 110, 0.473);
+    animation: beginningAni 0.8s ease 0.35s forwards;
+    visibility: visible;
+}
+
+
+.botton_Adv_MainBar_TextMainBar p {
+    margin-left: 20px;
+    margin: 0px;
+}
+
+.botton_Adv_MainBar_TextMainBar h4 {
+    margin-bottom: 0px;
+    margin-top: 15px;
+}
+
+.botton_Adv_MainBar_TextMainBar h5 {
+    margin-top: 10px;
+    color: rgb(96, 96, 96);
+}
+
+.botton_Adv_MainBar .botton_Adv_MainBar_TextMainBar {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    /* background-color: rgb(193, 161, 224); */
+    text-align: start;
+    /* padding: 4px; */
+    /* padding-left: 20px; */
+    justify-content: flex-start;
+    /* padding-top: 10px; */
+    flex-direction: column;
+    color: rgb(50, 50, 50);
+    /* line-height: 4px; */
+    /* gap: 4px; */
+    text-align: justify;
+    padding-left: 15px;
+}
+
+.botton_Adv_MainBar .botton_Adv_MainBar_EntryMainBar {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    /* border: 0.3px solid rgba(199, 199, 199, 0.475); */
+    /* left: -1px; */
+    box-shadow: 0px 5px 1px rgba(239, 239, 239, 0.596);
+    border-radius: 0px 0px 7px 7px;
+}
+
+/* rgb(221, 237, 250) */
+.botton_Adv_MainBar_EntryMainBar a {
+    position: relative;
+    width: 83%;
+    height: 70%;
+    /* background-color: rgb(221, 237, 250); */
+    background: linear-gradient(to left, rgb(221, 237, 250), rgb(160, 199, 231));
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(82, 82, 82);
+    font-weight: 580;
+    box-shadow: 0px 2px 9px rgba(133, 133, 133, 0.441);
+    transition: 0.2s;
+}
+
+.botton_Adv_MainBar_EntryMainBar a:hover {
+    /* background-color: rgb(156, 187, 211); */
+    transform: translateY(-3px);
+    box-shadow: 0px 2px 14px rgba(78, 78, 78, 0.441);
+}
+
+
+/* 内容主栏 */
+/* 内容主栏 */
+/* 内容主栏 */
+/* 内容主栏 */
+.contentMainBar {
+    position: relative;
+    width: 82%;
+    height: auto;
+    /* background-color: white; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 18%;
+}
+
+/* 导航栏 */
+.contentMainBar nav {
+    position: fixed;
+    width: 82%;
+    height: 60px;
+    background-color: rgba(244, 244, 244, 0.502);
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 0.3px solid rgba(199, 199, 199, 0.475);
+    box-shadow: 0px 1px 10px rgba(161, 161, 161, 0.596);
+}
+
+/* 导航栏 */
+.contentMainBar nav .timeMianBar{
+    position: relative;
+    width: 100px;
+    height: 100%;
+    /* background-color: rgb(188, 123, 123); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+
+}
+
+.contentMainBar nav .timeMianBar h3{
+    color: black;
+
+}
+
+.contentMainBar nav {
+    position: fixed;
+    width: 81%;
+    height: 60px;
+    background-color: rgb(255, 254, 254);
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 0.3px solid rgba(199, 199, 199, 0.475);
+    box-shadow: 0px 1px 10px rgba(161, 161, 161, 0.596);
+}
+
+
+.contentMainBar nav ul {
+    margin: 0px;
+    padding: 0px;
+    /* background-color: antiquewhite; */
+    gap: 10px;
+    display: flex;
+    list-style-type: none;
+    margin-left: 82%;
+}
+
+.contentMainBar nav ul li img {
+    width: 1%;
+    height: 1%;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.contentMainBar nav ul a {
+    text-decoration: none;
+    color: rgb(58, 58, 58);
+    transition: 0.2s;
+}
+
+.contentMainBar nav ul a:hover {
+    color: rgb(91, 34, 152);
+    transform: scale(1.05);
+}
+
+.contentMainBar nav ul li:hover {
+    transform: scale(1.05);
+}
+
+/* 主内容栏中的主内容栏 */
+/* 主内容栏中的主内容栏 */
+/* 主内容栏中的主内容栏 */
+.contentMainBar .contentMainBar_BodyMainBar {
+    position: relative;
+    width: 96%;
+    height: 100%;
+    /* background-color: rgb(173, 209, 191); */
+    /* background: linear-gradient(to bottom left  , rgba(252, 241, 252, 0.603) , white); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 7px;
+    /* border: 0.3px solid rgba(199, 199, 199, 0.475);
+    box-shadow: 0px 1px 5px rgba(179, 178, 178, 0.596); */
+    margin-top: 4.5%;
+    padding: 20px;
+}
+
+/* 主内容文字栏 */
+.contentMainBar_BodyMainBar .contentMainBar_BodyMainBar_TextMainBar{
+    position: relative;
+    /* background-color: antiquewhite; */
+    width: 100%;
+    height: auto;
+    line-height: 5px;
+
+}
+
+.contentMainBar_BodyMainBar_TextMainBar h5{
+    color: rgb(139, 139, 139);
+    font-weight: 510;
+}
+
+.contentMainBar_BodyMainBar .dataShowMainBar{
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* background-color: rgb(226, 211, 240); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    gap: 2%;
+}
+
+.dataShowMainBar .dataBox{
+    position: relative;
+    width: 23%;
+    height: 120px;
+    background-color: white;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    border-radius: 14px;
+    box-shadow: 0px 0px 20px rgba(212, 212, 212, 0.55);
+    border: 0.3px solid rgba(237, 237, 237, 0.671);
+    transition: 0.2s;
+    animation: beginningAni 0.8s ease forwards;
+    visibility: visible;
+}
+
+.dataShowMainBar .dataBox:hover{
+    box-shadow: 0px 0px 24px rgba(180, 180, 180, 0.55);
+    transform: translateY(-1px);
+}
+
+.dataBox .dataText{
+    position: relative;
+    width: 40%;
+    height: 80%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 20px;
+}
+
+.dataBox .dataText h5 , h4 , h3 {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.dataBox .dataText h5{
+    color: rgb(111, 111, 111);
+}
+
+
+.dataBox .dataText p{
+    margin: 0px;
+    padding: 0px;
+}
+
+.dataBox .dataImg{
+    position: relative;
+    width: 18%;
+    height: 45%;
+    background-color: rgba(200, 234, 243, 0.642);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin: 0px;
+    margin-left: 27%;
+    border-radius: 100px;
+}
+
+.dataBox .dataImg img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+
+/* 查询栏 */
+/* 查询栏 */
+/* 查询栏 */
+.contentMainBar .contentMainBar_queryMainBar{
+    position: relative;
+    width: 98%;
+    height: 100%;
+    background-color: white;
+    /* background-color: rgb(240, 192, 192); */
+    /* background: linear-gradient(to bottom left  , rgba(252, 241, 252, 0.603) , white); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 7px;
+    /* border: 0.3px solid rgba(199, 199, 199, 0.475);
+    box-shadow: 0px 1px 5px rgba(179, 178, 178, 0.596); */
+    margin-top: 1.5%;
+    padding: 5px;
+    margin-left: -12px;
+    box-shadow: 0px 0px 20px rgba(212, 212, 212, 0.55);
+    border: 0.3px solid rgba(237, 237, 237, 0.671);
+    animation: beginningAni 0.8s ease 0.2s forwards;
+    visibility: visible;
+}
+
+
+
+.contentMainBar_queryMainBar .contentMainBar_queryMainBar_InputSearch{
+    position: relative;
+    width: 19%;
+    height: 70px;
+    /* background-color: rgba(225, 207, 242, 0.993); */
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex-direction: column;
+    margin: 5px;
+    margin-left: 2%;
+}
+
+.contentMainBar_queryMainBar_InputSearch .InputSearch_top{
+    position: relative;
+    width: 100%;
+    height: 30%;
+    /* background-color: antiquewhite; */
+    text-align:start;
+}
+
+.contentMainBar_queryMainBar_InputSearch .InputSearch_top h4{
+    color: rgb(93, 93, 93);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contentMainBar_queryMainBar_InputSearch .InputSearch_bottom{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    /* background-color: aquamarine; */
+    display: flex;
+    margin-top: 5px;
+}
+
+.InputSearch_bottom input{
+    position: relative;
+    width: 75%;
+    height: 70%;
+    border-radius: 7px;
+    outline: none;
+    border: 0.3px solid rgba(201, 201, 201, 0.795);
+    box-shadow: 0px 0px 9px rgba(172, 172, 172, 0.352);
+    line-height: 50px;
+    padding-left: 14%;
+    transition: 0.3s;
+}
+
+.InputSearch_bottom input:focus {
+    border: 0.3px solid rgba(112, 112, 112, 0.598);
+    animation: inputvivid 1s ease 0s forwards;
+    visibility: visible;
+}
+
+@keyframes inputvivid {
+    0% {
+        box-shadow: 0px 0px 0px;
+    }
+
+    33% {
+        box-shadow: 0px 0px 10px rgba(132, 229, 192, 0.598);
+    }
+
+    66% {
+        box-shadow: 0px 0px 8px rgba(132, 229, 192, 0.598);
+    }
+
+    100% {
+        box-shadow: 0px 0px 4px rgba(132, 229, 192, 0.598);
+    }
+}
+
+
+
+.InputSearch_bottom input::placeholder {
+    color: rgb(103, 103, 103);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.InputSearch_bottom .inputImg_absolute{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blueviolet; */
+    margin-left: 5px;
+    margin-top: 4px;
+}
+
+.inputImg_absolute img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/* select设置 */
+.contentMainBar_queryMainBar_InputSearch select{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    border-radius: 7px;
+    outline: none;
+    border: 0.3px solid rgba(201, 201, 201, 0.795);
+    box-shadow: 0px 0px 9px rgba(172, 172, 172, 0.352);
+    line-height: 50px;
+    padding-left: 5%;
+    transition: 0.3s;
+}
+
+.InputSearch_bottom select:focus {
+    border: 0.3px solid rgba(112, 112, 112, 0.598);
+    animation: inputvivid 1s ease 0s forwards;
+    visibility: visible;
+}
+
+@keyframes inputvivid {
+    0% {
+        box-shadow: 0px 0px 0px;
+    }
+
+    33% {
+        box-shadow: 0px 0px 10px rgba(132, 229, 192, 0.598);
+    }
+
+    66% {
+        box-shadow: 0px 0px 8px rgba(132, 229, 192, 0.598);
+    }
+
+    100% {
+        box-shadow: 0px 0px 4px rgba(132, 229, 192, 0.598);
+    }
+}
+
+
+
+.InputSearch_bottom select::placeholder {
+    color: rgb(103, 103, 103);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.contentMainBar_queryMainBar .contentMainBar_queryMainBar_searchMainBar{
+    position: relative;
+    width: 200px;
+    height: 70px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 0px;
+    margin-left: 20px;
+
+}
+
+.contentMainBar_queryMainBar_searchMainBar button{
+    width: 55px;
+    height: 35px;
+    background-color: rgba(144, 62, 231, 0.772);
+    color: white;
+    outline: none;
+    border-radius: 7px;
+    border:none;
+    margin-top: 3px;
+    box-shadow: 0px 1px 9px rgba(139, 139, 139, 0.68);
+    transition: 0.2s;
+    margin-left: 20px;
+}
+
+.contentMainBar_queryMainBar_searchMainBar button:hover{
+    background-color: rgba(180, 118, 247, 0.772);
+    box-shadow: 0px 1px 13px rgba(120, 120, 120, 0.68);
+}
+
+.contentMainBar_queryMainBar_searchMainBar button:active{
+    transform: scale(0.9);
+}
+
+.extend_button button{
+    background-color: rgba(59, 134, 227, 0.772);
+    margin-left: 30px;
+}
+
+.extend_button button:hover{
+    background-color: rgba(110, 175, 255, 0.772);;
+    box-shadow: 0px 1px 13px rgba(120, 120, 120, 0.68);
+}
+
+/* 表格栏 */
+/* 表格栏 */
+/* 表格栏 */
+
+/* 表格栏 */
+/* 表格栏 */
+/* 表格栏 */
+.contentMainBar_BodyMainBar .tableMainBar{
+    position: relative;
+    width: 98.8%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+
+    flex-direction: column;
+    margin-top: 25px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 20px rgba(212, 212, 212, 0.55);
+    border: 0.3px solid rgba(237, 237, 237, 0.671);
+    margin-left: -10px;
+    animation: beginningAni 0.8s ease 0.3s forwards;
+    visibility: visible;
+}
+
+.tableMainBar .tablePageChooseMainBar{
+    position: relative;
+    width: 98%;
+    height: 30px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.tablePageChooseMainBar h5{
+    color: rgb(117, 117, 117);
+    font-weight: 560;
+}
+
+.fontColor_span{
+    color: rgb(33, 117, 226);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.tablePageChooseMainBar select{
+    position: relative;
+    width: 80px;
+    height: 90%;
+    border-radius: 5px;
+    outline: none;
+    border: 0.3px solid rgba(191, 191, 191, 0.795);
+    box-shadow: 0px 0px 5px rgba(198, 198, 198, 0.352);
+    line-height: 50px;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+
+.tablePageChooseMainBar select:focus {
+    border: 0.3px solid rgba(112, 112, 112, 0.598);
+    animation: inputvivid 1s ease 0s forwards;
+    visibility: visible;
+}
+
+.tablePageChooseMainBar input{
+    position: relative;
+    width: 60px;
+    height: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: 0.3px solid rgba(212, 212, 212, 0.795);
+    box-shadow: 0px 0px 9px rgba(184, 184, 184, 0.352);
+    line-height: 50px;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+
+.tablePageChooseMainBar input:focus {
+    border: 0.3px solid rgba(112, 112, 112, 0.598);
+    animation: inputvivid 1s ease 0s forwards;
+    visibility: visible;
+}
+
+/* 上一页和下一页按钮设置 */
+/* 上一页和下一页按钮设置 */
+/* 上一页和下一页按钮设置 */
+.previousPageButton{
+    width: 35px;
+    height: 33px;
+    background-color: rgba(253, 248, 253, 0.614);
+    border: 0.25px solid rgb(198, 180, 209);
+    border-radius: 5px;
+    margin-left: 10px;
+    color: rgb(180, 100, 230);
+    transition: 0.15s;
+}
+
+.previousPageButton:hover{
+    background-color: rgba(158, 116, 208, 0.815);
+    border: none;
+    color: white;
+    box-shadow: 0px 1px 10px rgba(157, 157, 157, 0.708);
+    transform: translateY(-1.5px);
+}
+
+.previousPageButton:active{
+    transform: scale(0.95);
+}
+
+/* 下一页 */
+.nestPageButton{
+    width: 35px;
+    height: 33px;
+    background-color: rgba(253, 248, 253, 0.614);
+    border: 0.25px solid rgb(198, 180, 209);
+    border-radius: 5px;
+    margin-left: 7px;
+    color: rgb(180, 100, 230);
+    transition: 0.15s;
+}
+
+.nestPageButton:hover{
+    background-color: rgba(158, 116, 208, 0.815);
+    border: none;
+    color: white;
+    box-shadow: 0px 1px 10px rgba(157, 157, 157, 0.708);
+    transform: translateY(-1.5px);
+}
+
+.nestPageButton:active{
+    transform: scale(0.95);
+}
+
+/* 保留当前页数 */
+/* 保留当前页数 */
+/* 保留当前页数 */
+.savePageButton{
+    position: relative;
+    width: 75px;
+    height: 31px;
+    background-color: rgba(249, 249, 255, 0.84);
+    border: 0.2px solid rgba(169, 171, 193, 0.911);
+    border-radius: 4px;
+    margin-left: 20px;
+    color: rgb(127, 129, 172);
+    transition: 0.2s;
+}
+
+.savePageButton:hover{
+    background-color: rgba(143, 143, 179, 0.84);
+    border:none;
+    color: white;
+    box-shadow: 0px 1px 9px rgba(186, 186, 186, 0.708);
+    transform: translateY(-1.5px);
+}
+
+.savePageButton:active{
+    transform: scale(0.97);
+}
+
+/* 滑块 */
+/* 滑块 */
+/* 滑块 */
+/* 滑块 */
+/* 仅保留核心样式，去掉冗余美化 */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;  /* 滑块宽度（缩小一点更简洁） */
+    height: 26px; /* 滑块高度 */
+    margin-left: 20px;
+}
+/* 隐藏原生复选框 */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+/* 滑块背景 + 小圆点 */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    border-radius: 26px; /* 和高度一致，保证椭圆 */
+    transition: .2s; /* 快速动画，更简洁 */
+}
+/* 小圆点 */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; /* 圆点高度 */
+    width: 18px;  /* 圆点宽度 */
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .2s;
+}
+/* 勾选后样式 */
+input:checked + .slider {
+    background-color: #4caf9e; /* 仅保留核心颜色 */
+}
+input:checked + .slider:before {
+    transform: translateX(24px); /* 50-18-4-4=24，刚好滑到右边 */
+}
+
+
+
+/* 查询全部按钮 */
+/* 查询全部按钮 */
+/* 查询全部按钮 */
+.tablePageChooseMainBar .queryAllWord{
+    position: relative;
+    width: 75px;
+    height: 31px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    margin-right: 0.5%;
+}
+
+/* 查询全部按钮 */
+/* 查询全部按钮 */
+/* 查询全部按钮 */
+.queryAllWord .queryAllButton{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(249, 253, 255, 0.84);
+    border: 0.2px solid rgba(151, 169, 184, 0.911);
+    border-radius: 4px;
+    color: rgb(86, 99, 109);
+    transition: 0.2s;
+
+}
+
+.queryAllButton:hover{
+    background-color: rgba(131, 143, 154, 0.84);
+    border:none;
+    color: white;
+    box-shadow: 0px 1px 9px rgba(186, 186, 186, 0.708);
+    transform: translateY(-1.5px);
+}
+
+.queryAllButton:active{
+    transform: scale(0.97);
+}
+
+.queryAllWord button{
+    width: 60%;
+    height: 100%;
+    border: none;
+    background: none;
+    color: rgb(70, 70, 70);
+    border-radius: 7px;
+    transition: 0.2s;
+    transition: 0.2s;
+}
+
+
+.queryAllWord label{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.queryAllWord img{
+    width: 15px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* 新增按钮 */
+.tablePageChooseMainBar .AdditionWord{
+    position: relative;
+    width: 50px;
+    height: 31px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 10px;
+}
+
+
+/* 新增按钮 */
+/* 新增按钮 */
+/* 新增按钮 */
+.AdditionWord .addButton{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 255, 250, 0.84);
+    border: 0.2px solid rgba(150, 201, 176, 0.911);
+    border-radius: 4px;
+    color: rgb(117, 179, 146);
+    transition: 0.2s;
+
+}
+
+.addButton:hover{
+    background-color: rgba(115, 179, 140, 0.84);
+    border:none;
+    color: white;
+    box-shadow: 0px 1px 9px rgba(186, 186, 186, 0.708);
+    transform: translateY(-1.5px);
+}
+
+.addButton:active{
+    transform: scale(0.97);
+}
+
+
+.AdditionWord label button{
+    width: 50%;
+    height: 100%;
+    border: none;
+    background: none;
+    color: rgb(70, 70, 70);
+    border-radius: 7px;
+    transition: 0.2s;
+    transition: 0.2s;
+    padding: 0px;
+}
+
+.AdditionWord label{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.AdditionWord img{
+    width: 15px;
+    height: auto;
+    object-fit: cover;
+    margin: 0px;
+}
+
+/* 批量删除 */
+.tablePageChooseMainBar .largelyDelete{
+    position: relative;
+    width: 75px;
+    height: 31px;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px;
+    margin-left: 55px;
+}
+
+/* 批量删除按钮 */
+/* 批量删除按钮 */
+/* 批量删除按钮 */
+.largelyDelete .largelyDeleteButton{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 248, 245, 0.84);
+    border: 0.2px solid rgba(201, 166, 150, 0.911);
+    border-radius: 4px;
+    color: rgb(179, 128, 117);
+    transition: 0.2s;
+
+}
+
+.largelyDeleteButton:hover{
+    background-color: rgba(179, 130, 115, 0.84);
+    border:none;
+    color: white;
+    box-shadow: 0px 1px 9px rgba(186, 186, 186, 0.708);
+    transform: translateY(-1.5px);
+}
+
+.largelyDeleteButton:active{
+    transform: scale(0.97);
+}
+
+
+
+
+.largelyDelete label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.largelyDelete label img{
+    width: 15px;
+    height: auto;
+    object-fit: cover;
+
+}
+
+.largelyDelete a{
+    text-decoration: none;
+
+}
+
+.largelyDelete button{
+    background: none;
+    border: none;
+    outline: none;
+    color: rgb(91, 91, 91);
+    font-weight: 560;
+    transition: 0.2s;
+}
+
+.tableMainBar table{
+    width: 98%;
+    height: auto;
+    border-collapse: collapse;
+    /* background-color: aqua; */
+    transition: 0.2s;
+}
+
+.tableMainBar table tr:hover{
+    background-color: rgba(236, 245, 255, 0.621);
+}
+
+.tableMainBar table thead{
+    height: 45px;
+    background-color: rgba(226, 217, 227, 0.705);
+    font-size: 14px;
+    color: rgb(72, 72, 72);
+    font-weight: 1000;
+}
+
+.tableMainBar table thead tr{
+    margin: 1000px;
+}
+
+.tableMainBar table tbody tr{
+    height: 50px;
+    background-color:white;
+    border-bottom: 0.5px solid rgba(211, 210, 210, 0.598);
+    font-size: 12px;
+    color: rgb(92, 92, 92);
+    font-weight: 100;
+}
+
+.tableMainBar table tbody tr h4{
+    font-weight: 380;
+}
+
+
+/* 通过率 */
+/* 通过率 */
+/* 通过率 */
+
+.tableMainBar .passPercent_hight{
+    width: 45px;
+    height: 22px;
+    background-color:rgba(222, 247, 254, 0.564);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableMainBar .passPercent_hight h4{
+    color: rgb(0, 148, 193);
+}
+
+.tableMainBar .passPercent_middle{
+    width: 45px;
+    height: 22px;
+    background-color:rgba(246, 241, 193, 0.454);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableMainBar .passPercent_middle h4{
+    color: rgb(204, 191, 5);
+}
+
+.tableMainBar .passPercent_Best{
+    width: 45px;
+    height: 22px;
+    background-color:rgba(243, 216, 255, 0.507);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableMainBar .passPercent_Best h4{
+    color: rgb(178, 113, 228);
+}
+
+.tableMainBar .passPercent_less{
+    width: 45px;
+    height: 22px;
+    background-color:rgba(255, 216, 229, 0.507);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableMainBar .passPercent_less h4{
+    color: rgb(198, 64, 95);
+}
+
+.tableMainBar .passPercent_null{
+    width: 45px;
+    height: 22px;
+    background-color:rgba(227, 227, 227, 0.614);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+tableMainBar .passPercent_null h4{
+    color: rgb(179, 179, 179);
+}
+
+/* 通过率 */
+/* 通过率 */
+/* 通过率 */
+
+
+/* 删除和修改按钮 */
+/* 删除和修改按钮 */
+/* 删除和修改按钮 */
+.delete_span button{
+    width: 40px;
+    height: 25px;
+    background-color: rgba(253, 225, 220, 0.68);
+    outline: none;
+    border: 0.4px solid rgb(255, 170, 152);
+    color: rgb(243, 82, 46);
+    border-radius: 4px;
+    transition: 0.2s;
+}
+/* passPercent_Best */
+.delete_span button:hover{
+    background-color: rgb(243, 87, 53);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0px 1px 7px rgba(98, 98, 98, 0.642);
+}
+
+.delete_span button:active{
+    transform: scale(0.8);
+}
+
+.revise_span button{
+    width: 40px;
+    height: 25px;
+    background-color: rgba(221, 241, 254, 0.68);
+    outline: none;
+    border: 0.4px solid rgb(127, 190, 249);
+    color: rgb(47, 111, 241);
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.revise_span button:hover{
+    background-color: rgb(58, 119, 225);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0px 1px 7px rgba(98, 98, 98, 0.642);
+}
+
+.revise_span button:active{
+    transform: scale(0.8);
+}
+
+/* 删除和修改按钮 */
+/* 删除和修改按钮 */
+/* 删除和修改按钮 */
+
+
+/* 页数选择 */
+.tableMainBar .pageChooseMainBar{
+    position: relative;
+    width: 98%;
+    height: 30px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+.pageChooseMainBar h5{
+    color: rgb(102, 102, 102);
+    font-weight: 560;
+    margin-left: 20px;
+}
+
+.pageChooseMainBar_span{
+    color: rgb(133, 198, 34);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.pageShow_span{
+    color: rgb(28, 117, 251);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.pageChooseMainBar .pageClickMainBar{
+    position: relative;
+    width: auto;
+    height: 100%;
+    /* background-color: rgb(179, 235, 216); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 58%;
+    gap: 6px;
+}
+
+.pageClickMainBar button{
+    position: relative;
+    width: 35px;
+    height: 110%;
+    background-color: rgba(239, 250, 247, 0.726);
+    border: 1.1px solid rgb(53, 193, 146);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    color: rgb(53, 193, 146);
+    transition: 0.2s;
+}
+
+.pageClickMainBar button:hover{
+    background-color: rgba(30, 188, 146, 0.726);
+    color: white;
+    border: none;
+    transform: translateY(-1px);
+    box-shadow: 0px 1px 8px rgba(108, 108, 108, 0.721);
+}
+
+.pageClickMainBar button:active{
+    transform: scale(0.8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 手机端响应式 */
+/* 手机端响应式 */
+/* 手机端响应式 */
+/* 手机端响应式 */
+/* 手机端响应式 */
+/* 手机端响应式 */
+/* 手机端响应式 *//* 手机端响应式 */
+
+/* 响应式适配 - 平板设备 (768px ~ 1199px) */
+@media (min-width: 768px) and (max-width: 1590px) {
+    /* 侧边栏调整 */
+    .sideMainBar {
+        width: 240px;
+        height: 100vh;
+        margin-left: 0;
+    }
+
+    /* 内容主栏调整 */
+    .contentMainBar {
+        width: calc(100% - 240px);
+        margin-left: 240px;
+    }
+
+    .contentMainBar nav {
+        width: calc(100% - 240px);
+    }
+
+    /* 数据卡片调整 */
+    .dataShowMainBar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .dataBox {
+        width: calc(50% - 10px) !important;
+        height: 110px;
+    }
+
+    /* 查询栏调整 */
+    .contentMainBar_queryMainBar {
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .contentMainBar_queryMainBar_InputSearch {
+        width: calc(33.333% - 15px) !important;
+        margin-bottom: 15px;
+    }
+
+    .contentMainBar_queryMainBar_searchMainBar {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    /* 表格区域调整 */
+    .tablePageChooseMainBar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .largelyDelete {
+        margin-left: auto !important;
+        margin-top: 10px;
+    }
+
+    .pageChooseMainBar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .pageClickMainBar {
+        margin-left: auto !important;
+        margin-top: 10px;
+    }
+
+    /* 表格内容适配 */
+    table {
+        font-size: 11px;
+    }
+
+    .delete_span button, .revise_span button {
+        width: 35px;
+        height: 22px;
+        font-size: 11px;
+    }
+}
+
+/* 响应式适配 - 手机设备 (<= 767px) */
+@media (max-width: 767px) {
+    /* 侧边栏隐藏，通过菜单按钮控制显示 */
+    .sideMainBar {
+        position: fixed;
+        left: -280px;
+        z-index: 999;
+        transition: left 0.3s ease;
+        height: 100vh;
+        margin-left: 0;
+    }
+
+    .sideMainBar.active {
+        left: 0;
+    }
+
+    /* 内容主栏占满屏幕 */
+    .contentMainBar {
+        width: 100%;
+        margin-left: 0;
+        padding-bottom: 80px;
+    }
+
+    .contentMainBar nav {
+        width: 100%;
+        padding: 0 15px;
+        justify-content: space-between;
+    }
+
+    /* 移动端菜单按钮 */
+    .mobile-menu-btn {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(144, 62, 231, 0.772);
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .mobile-menu-btn span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: white;
+        position: relative;
+    }
+
+    .mobile-menu-btn span::before,
+    .mobile-menu-btn span::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 2px;
+        background-color: white;
+        left: 0;
+    }
+
+    .mobile-menu-btn span::before {
+        top: -8px;
+    }
+
+    .mobile-menu-btn span::after {
+        bottom: -8px;
+    }
+
+    /* 导航栏调整 */
+    .contentMainBar nav ul {
+        margin-left: 0;
+        gap: 15px;
+    }
+
+    .timeMianBar {
+        display: none;
+    }
+
+    /* 主内容区域调整 */
+    .contentMainBar_BodyMainBar {
+        width: 100%;
+        padding: 15px;
+        margin-top: 80px;
+    }
+
+    .contentMainBar_BodyMainBar_TextMainBar {
+        line-height: normal;
+        margin-bottom: 20px;
+    }
+
+    .contentMainBar_BodyMainBar_TextMainBar h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .contentMainBar_BodyMainBar_TextMainBar h5 {
+        font-size: 13px;
+    }
+
+    /* 数据卡片调整 - 单列显示 */
+    .dataShowMainBar {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .dataBox {
+        width: 100% !important;
+        height: 100px;
+    }
+
+    .dataText h3 {
+        font-size: 18px;
+    }
+
+    .dataText h5 {
+        font-size: 12px;
+    }
+
+    /* 查询栏调整 - 单列显示 */
+    .contentMainBar_queryMainBar {
+        flex-direction: column;
+        padding: 15px;
+        margin-left: 0;
+    }
+
+    .contentMainBar_queryMainBar_InputSearch {
+        width: 100% !important;
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    .InputSearch_bottom input,
+    .InputSearch_bottom select {
+        width: 100% !important;
+        font-size: 13px;
+        height: 40px;
+    }
+
+    /* 搜索按钮区域 */
+    .contentMainBar_queryMainBar_searchMainBar {
+        width: 100%;
+        margin-left: 0;
+        flex-direction: row;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .contentMainBar_queryMainBar_searchMainBar button {
+        width: calc(50% - 7.5px);
+        margin-left: 0;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    /* 表格区域调整 */
+    .tableMainBar {
+        width: 100%;
+        margin-left: 0;
+        overflow-x: auto;
+        border-radius: 7px;
+    }
+
+    .tablePageChooseMainBar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .tablePageChooseMainBar h5 {
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    .tablePageChooseMainBar select {
+        width: 100px;
+        height: 35px;
+    }
+
+    .largelyDelete {
+        margin-left: 0 !important;
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 5px;
+    }
+
+    /* 表格滚动适配 */
+    table {
+        min-width: 640px;
+        font-size: 11px;
+    }
+
+    th, td {
+        padding: 8px 5px;
+    }
+
+    .passPercent_hight,
+    .passPercent_middle,
+    .passPercent_Best,
+    .passPercent_less {
+        width: 40px;
+        height: 20px;
+    }
+
+    /* 分页区域调整 */
+    .pageChooseMainBar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .pageChooseMainBar h5 {
+        margin-left: 0;
+        font-size: 12px;
+    }
+
+    .pageClickMainBar {
+        margin-left: 0 !important;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .pageClickMainBar button {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    /* 底部广告栏调整 */
+    .botton_Adv_MainBar {
+        margin-top: 50px;
+        height: auto;
+        padding: 15px;
+    }
+
+    .botton_Adv_MainBar_TextMainBar h4 {
+        font-size: 15px;
+    }
+
+    .botton_Adv_MainBar_TextMainBar h5 {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}
+
+/* 手机端响应式 */
+/* 手机端响应式 */
+/* 手机端响应式 *//* 手机端响应式 */
+/* 手机端响应式 */
+/* 手机端响应式 */
+/* 手机端响应式 */
+
+
+
+
+
+
+
+
+
+
+
+
+/* 修改主栏 */
+.updateBackgroudMainBox{
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.updateBackgroudMainBox .updateHandleBar{
+    position: relative;
+    width: 750px;
+    height: auto;
+    border-radius: 9px;
+    background-color: white;
+    box-shadow: 0px 2px 8px rgba(79, 79, 79, 0.71);
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+    animation: beginningAni 0.8s ease 0s forwards;
+    visibility: visible;
+}
+
+/* 标题栏 */
+.updateHandleBar .titleMainBar{
+    position: relative;
+    width: 90%;
+    height: 40px;
+    /* background-color: rgb(219, 253, 241); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* update主栏 */
+.updateHandleBar .updateMainBar{
+    position: relative;
+    width: 90%;
+    height: 300px;
+    /* background-color: rgba(239, 239, 239, 0.619); */
+    /* background-color: rgba(197, 216, 230, 0.247); */
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+/* updateHnag容器 */
+.updateMainBar .updateMainBar_hang{
+    position: relative;
+    width: 100%;
+    height: 26%;
+    /* background-color: rgb(226, 208, 243); */
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+
+}
+
+/* 每个单独的input框 */
+.updateMainBar_hang label{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex-direction: column;
+}
+
+/* input上面注释文字设置 */
+.updateMainBar_hang label h4{
+    font-size: 14px;
+    font-weight: 535;
+    color: rgb(98, 98, 98);
+}
+
+/* input设置 */
+.updateMainBar_hang label input{
+    width: 90%;
+    height: 42%;
+    border-radius: 4px;
+    background-color: white;
+    outline: none;
+    border: 0.3px solid rgba(123, 123, 123, 0.71);
+    transition: 0.2s;
+    padding-left: 14px;
+}
+
+/* 动态交互 */
+.updateMainBar_hang label input:focus{
+    animation: updateMainBar_hang_dynamic 0.9s ease 0s forwards;
+    visibility: visible;
+}
+
+@keyframes updateMainBar_hang_dynamic{
+    0%{
+        outline: 0px solid rgba(132, 24, 232, 0.728);
+    }
+    33%{
+        outline: 2.2px solid rgba(132, 24, 232, 0.728);
+    }
+    66%{
+        outline: 0.4px solid rgba(132, 24, 232, 0.728);
+    }
+    100%{
+        outline: 1px solid rgba(132, 24, 232, 0.728);
+    }
+}
+
+
+/* 按纽栏 */
+.updateHandleBar .updateButtopnMainBar{
+    position: relative;
+    width: 90%;
+    height: 14%;
+    background-color: rgba(197, 216, 230, 0.247);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    margin-top: -20px;
+}
+
+/* 取消按钮 */
+.cancel_span button{
+    width: 60px;
+    height: 37px;
+    background-color: rgb(68, 171, 171);
+    border: none;
+    color: black;
+    border-radius: 4px;
+    color: white;
+    margin-left: 500px;
+    transition: 0.2s;
+}
+
+.cancel_span button:hover{
+    background-color: rgb(70, 155, 155);
+    box-shadow: 0px 2px 12px rgba(176, 176, 176, 0.619);
+}
+
+.cancel_span button:active{
+    transform: scale(0.90);
+}
+
+/* 确认按钮 */
+.confirm_span button{
+    width: 79px;
+    height: 41px;
+    background-color: rgb(157, 116, 211);
+    border: none;
+    color: black;
+    border-radius: 6px;
+    color: white;
+    margin-left: 25px;
+    transition: 0.2s;
+}
+
+.confirm_span button:hover{
+    background-color: rgb(63, 175, 175);
+    background-color: rgb(136, 98, 186);
+}
+
+.confirm_span button:active{
+    transform: scale(0.90);
+}
+
+
+
+
+
+
+
+/* 修改主栏 */
+.updateBackgroudMainBox{
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.updateBackgroudMainBox .updateHandleBar{
+    position: relative;
+    width: 750px;
+    height: auto;
+    border-radius: 9px;
+    background-color: white;
+    box-shadow: 0px 2px 8px rgba(79, 79, 79, 0.71);
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+    animation: beginningAni 0.8s ease 0s forwards;
+    visibility: visible;
+}
+
+/* 标题栏 */
+.updateHandleBar .titleMainBar{
+    position: relative;
+    width: 90%;
+    height: 40px;
+    /* background-color: rgb(219, 253, 241); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* update主栏 */
+.updateHandleBar .updateMainBar{
+    position: relative;
+    width: 90%;
+    height: 300px;
+    /* background-color: rgba(239, 239, 239, 0.619); */
+    /* background-color: rgba(197, 216, 230, 0.247); */
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+/* updateHnag容器 */
+.updateMainBar .updateMainBar_hang{
+    position: relative;
+    width: 100%;
+    height: 26%;
+    /* background-color: rgb(226, 208, 243); */
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+
+}
+
+/* 每个单独的input框 */
+.updateMainBar_hang label{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* input上面注释文字设置 */
+.updateMainBar_hang label h4{
+    font-size: 14px;
+    font-weight: 450;
+    color: rgb(108, 108, 108);
+}
+
+/* input设置 */
+.updateMainBar_hang label input{
+    width: 90%;
+    height: 42%;
+    border-radius: 4px;
+    background-color: white;
+    outline: none;
+    border: 0.3px solid rgba(123, 123, 123, 0.71);
+    transition: 0.2s;
+    padding-left: 14px;
+}
+
+/* 动态交互 */
+.updateMainBar_hang label input:focus{
+    animation: updateMainBar_hang_dynamic 0.9s ease 0s forwards;
+    visibility: visible;
+}
+
+@keyframes updateMainBar_hang_dynamic{
+    0%{
+        outline: 0px solid rgba(132, 24, 232, 0.728);
+    }
+    33%{
+        outline: 2.2px solid rgba(132, 24, 232, 0.728);
+    }
+    66%{
+        outline: 0.4px solid rgba(132, 24, 232, 0.728);
+    }
+    100%{
+        outline: 1.2px solid rgba(132, 24, 232, 0.728);
+    }
+}
+
+
+/* 按纽栏 */
+/* 按纽栏 */
+/* 按纽栏 */
+/* 按纽栏 */
+.updateHandleBar .updateButtopnMainBar{
+    position: relative;
+    width: 90%;
+    height: 14%;
+    background-color: rgba(197, 216, 230, 0.247);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    margin-top: -20px;
+}
+
+/* 取消按钮 */
+.cancel_span button{
+    width: 60px;
+    height: 37px;
+    background-color: rgb(68, 171, 171);
+    border: none;
+    color: black;
+    border-radius: 4px;
+    color: white;
+    margin-left: 500px;
+    transition: 0.2s;
+}
+
+.cancel_span button:hover{
+    background-color: rgb(70, 155, 155);
+    box-shadow: 0px 2px 12px rgba(176, 176, 176, 0.619);
+}
+
+.cancel_span button:active{
+    transform: scale(0.90);
+}
+
+/* 确认按钮 */
+.confirm_span button{
+    width: 79px;
+    height: 41px;
+    background-color: rgb(157, 116, 211);
+    border: none;
+    color: black;
+    border-radius: 6px;
+    color: white;
+    margin-left: 25px;
+    transition: 0.2s;
+}
+
+.confirm_span button:hover{
+    background-color: rgb(63, 175, 175);
+    background-color: rgb(136, 98, 186);
+}
+
+.confirm_span button:active{
+    transform: scale(0.90);
+}
+
+
+/* 新增公共单词 */
+/* 新增公共单词 */
+/* 新增公共单词 */
+/* 新增公共单词 */
+.addBackgroudMainBox{
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.addBackgroudMainBox .addHandleBar{
+    position: relative;
+    width: 750px;
+    height: auto;
+    border-radius: 9px;
+    background-color: white;
+    box-shadow: 0px 2px 8px rgba(79, 79, 79, 0.71);
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+    animation: beginningAni 0.8s ease 0s forwards;
+    visibility: visible;
+}
+
+/* 标题栏 */
+.addHandleBar .titleMainBar{
+    position: relative;
+    width: 90%;
+    height: 40px;
+    /* background-color: rgb(219, 253, 241); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* update主栏 */
+.addHandleBar .addMainBar{
+    position: relative;
+    width: 90%;
+    height: 300px;
+    /* background-color: rgba(239, 239, 239, 0.619); */
+    /* background-color: rgba(197, 216, 230, 0.247); */
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+/* updateHnag容器 */
+.addMainBar .addMainBar_hang{
+    position: relative;
+    width: 100%;
+    height: 26%;
+    /* background-color: rgb(226, 208, 243); */
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+
+}
+
+/* 每个单独的input框 */
+.addMainBar_hang label{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* input上面注释文字设置 */
+.addMainBar_hang label h4{
+    font-size: 14px;
+    font-weight: 450;
+    color: rgb(108, 108, 108);
+}
+
+/* input设置 */
+.addMainBar_hang label input{
+    width: 90%;
+    height: 42%;
+    border-radius: 4px;
+    background-color: white;
+    outline: none;
+    border: 0.3px solid rgba(123, 123, 123, 0.71);
+    transition: 0.2s;
+    padding-left: 14px;
+}
+
+/* 动态交互 */
+.addMainBar_hang label input:focus{
+    animation: updateMainBar_hang_dynamicAdd 0.9s ease 0s forwards;
+    visibility: visible;
+}
+
+@keyframes updateMainBar_hang_dynamicAdd{
+    0%{
+        outline: 0px solid rgba(232, 24, 152, 0.507);
+    }
+    33%{
+        outline: 2.2px solid rgba(232, 24, 166, 0.507);
+    }
+    66%{
+        outline: 0.4px solid rgba(232, 24, 208, 0.507);
+    }
+    100%{
+        outline: 1px solid rgba(227, 48, 179, 0.45);
+    }
+}
+
+
+/* 按纽栏 */
+.addHandleBar .addButtopnMainBar{
+    position: relative;
+    width: 90%;
+    height: 14%;
+    background-color: rgba(204, 197, 230, 0.247);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    margin-top: -20px;
+}
+
+/* 取消按钮 */
+.cancel_spanAdd button{
+    width: 60px;
+    height: 37px;
+    background-color: rgb(111, 68, 171);
+    border: none;
+    color: black;
+    border-radius: 4px;
+    color: white;
+    margin-left: 500px;
+    transition: 0.2s;
+}
+
+.cancel_spanAdd button:hover{
+    background-color: rgb(90, 64, 126);
+    box-shadow: 0px 2px 12px rgba(176, 176, 176, 0.619);
+}
+
+.cancel_spanAdd button:active{
+    transform: scale(0.90);
+}
+
+/* 确认按钮 */
+.confirm_spanAdd button{
+    width: 79px;
+    height: 41px;
+    background-color: rgb(211, 116, 175);
+    border: none;
+    color: black;
+    border-radius: 6px;
+    color: white;
+    margin-left: 25px;
+    transition: 0.2s;
+}
+
+.confirm_spanAdd button:hover{
+    background-color: rgb(63, 175, 175);
+    background-color: rgb(186, 98, 127);
+}
+
+.confirm_spanAdd button:active{
+    transform: scale(0.90);
+}

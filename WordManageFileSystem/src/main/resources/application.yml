@@ -1,0 +1,41 @@
+
+# Spring 核心配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/小卡单词管理文档?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: qwe1233112233
+    type: com.zaxxer.hikari.HikariDataSource
+
+  servlet:
+    multipart:
+        # 单个文件最大大小（比如 10MB，单位支持 MB/KB/GB）
+      max-file-size: 10MB
+        # 一次请求所有文件总大小（比如 20MB）
+      max-request-size: 20MB
+        # 可选：是否启用文件上传（默认true，不用改）
+      enabled: true
+
+# MyBatis 核心配置
+mybatis:
+  # 简化 mapper-locations：扫描 resources/mapper 下所有 XML
+  mapper-locations: classpath:mapper/*.xml
+  # 实体类包名（让 resultType 后续可直接写 Word）
+  type-aliases-package: com.example.wordmanagefilesystem.Pojo
+  # 开启 MyBatis 日志，查看 XML 是否加载、SQL 是否执行
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true # 下划线自动转驼峰（可选，避免字段映射问题）
+
+logging:
+  level:
+    # 配置当前控制器包的日志级别（DEBUG/INFO/WARN/ERROR）
+    com.example.wordmanagefilesystem.Controller: INFO
+
+aliyun:
+  oss:
+    endpoint : oss-cn-beijing.aliyuncs.com
+    accessKeyId : LTAI5tMHtsAAT9Cwu49Js7Ht
+    accessKeySecret : FrxrzH312SJqXUFkP85Cd4bCc77bHa
+    bucketName : java-web-xiaoka

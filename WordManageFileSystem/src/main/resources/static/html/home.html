@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../home_Img/【哲风壁纸】国风元素-奇幻国风copy.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../css/home.css">
+    <title>单词管理文档</title>
+</head>
+<body>
+<aside class="sideMainBar">
+    <!-- Logo和名称 -->
+    <div class="headMainBar">
+        <div class="logoAndTextMainBar">
+            <div class="logoMainBar"><img src="../home_Img/【哲风壁纸】国风元素-奇幻国风.png" alt=""></div>
+            <div class="nameMainBar">
+                <h1>单词管理文档</h1>
+            </div>
+        </div>
+
+        <!-- 输入栏 -->
+        <div class="headInput">
+            <div class="inputMainBar">
+                <input type="text" placeholder="词海查询..." id="search">
+                <img src="../home_Img/搜索.png" alt="">
+                <button class="inputMainBar_button" id="sideButton">搜索</button>
+            </div>
+        </div>
+        <div class="line"></div>
+    </div>
+    <!-- body栏 -->
+    <div class="bodyMainBar">
+        <div class="advMainBar">
+            <div class="advMainBar_leftMainBar">
+                <div class="imgBar"><img src="../home_Img/屏幕截图%202025-12-11%20161556.png" alt=""></div>
+                <div class="textBar">
+                    <p><h4 style="margin: 0px;color: rgb(44, 44, 44)">词汇巧计</h4></p>
+                    <p><h5 style="margin: 0px; color: rgb(126, 126, 126);margin-left: -5px;">35名成员</h5></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chooseMainBar">
+            <h4>常规</h4>
+            <ul>
+                <li><a href="home.html">
+                    <button style="background-color: white;box-shadow: 0px 2px 9px rgba(151, 151, 151, 0.393);">
+                        <img src="../home_Img/房子.png" alt=""><h4 style="color: rgba(77, 14, 148, 0.737);">华词表</h4></button>
+                </a></li>
+                <li><a href="check.html">
+                    <button><img src="../home_Img/对话框.png" alt="">
+                        <p>词亦抽</p></h4></button>
+                </a></li>
+                <li><a href="note">
+                    <button><img src="../home_Img/抽查检查.png" alt="">
+                        <p>孤词薄</p></button>
+                </a></li>
+                <li><a href="look">
+                    <button><img src="../home_Img/阅读.png" alt="">
+                        <p>阅速摘</p></button>
+                </a></li>
+                <li><a href="data.html">
+                    <button><img src="../home_Img/数据.png" alt="">
+                        <p>数穆钧</p></button>
+                </a></li>
+                <li><a href="msg.html">
+                    <button><img src="../home_Img/设置.png" alt="">
+                        <p>个人中心</p></button>
+                </a></li>
+            </ul>
+        </div>
+
+        <!-- 底部广告栏 -->
+        <div class="botton_Adv_MainBar">
+            <div class="botton_Adv_MainBar_TextMainBar">
+                <p><h4>Project试用计划</h4></p>
+                <p><h5>您的计划仅离开12天，请参阅并订阅 <br>我们的高级计划</h5></p>
+            </div>
+            <div class="botton_Adv_MainBar_EntryMainBar">
+                <a href="#">查看计划</a>
+            </div>
+        </div>
+    </div>
+</aside>
+<!-- 内容主栏 -->
+<div class="contentMainBar">
+    <div class="contentMainBar_BodyMainBar">
+        <div class="contentMainBar_BodyMainBar_TextMainBar">
+            <p>
+            <h3>华词表·炑冘</h3></p>
+            <p><h5>提供查询添加等功能，实施精确记忆查漏补缺</h5></p>
+            <div class="dataShowMainBar">
+                <div class="dataBox">
+                    <div class="dataText">
+                        <p><h5>单词准确率</h5></p>
+                        <p>
+                        <h3 id="accuracy"></h3></p>
+                        <p><h5 style="color: rgb(243, 119, 148); font-weight: 390" id="accuracyDif">2.6%</h5></p>
+                    </div>
+                    <div class="dataImg"><img src="../home_Img/准确率高，高效稳定.png" alt=""
+                                              style="margin-top: -3px; margin-left: 3px;"></div>
+                </div>
+                <div class="dataBox">
+                    <div class="dataText">
+                        <p><h5>新增词汇数</h5></p>
+                        <p>
+                        <h3 id="newWord"></h3></p>
+                        <p><h5 style="color: rgb(99, 189, 118); font-weight: 390" id="newWordDif">14.2%</h5></p>
+                    </div>
+                    <div class="dataImg" style="background-color: rgba(204, 239, 222, 0.692);"><img
+                            src="../home_Img/新增1.png" alt="" style="width: 50%; height: 50%;"></div>
+                </div>
+                <div class="dataBox">
+                    <div class="dataText">
+                        <p><h5>收录单词总数</h5></p>
+                        <p>
+                        <h3 id="total"></h3></p>
+                        <p><h5 style="color: rgb(230, 214, 0); font-weight: 390" id="officialDif">100%</h5></p>
+                    </div>
+                    <div class="dataImg" style="background-color: rgba(230, 221, 244, 0.582);"><img
+                            src="../home_Img/收录于%20(1).png" alt="" style="width: 40%; height: 40%;"></div>
+                </div>
+                <div class="dataBox">
+                    <div class="dataText">
+                        <p><h5>易错词汇数</h5></p>
+                        <p>
+                        <h3 id="mistake"></h3></p>
+                        <p><h5 style="color: rgb(173, 122, 232); font-weight: 390" id="lessDif">1.7%</h5></p>
+                    </div>
+                    <div class="dataImg" style="background-color: rgba(241, 224, 208, 0.747);"><img
+                            src="../home_Img/易错题.png" alt="" style="width: 45%; height: 45%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 查询栏 -->
+        <div class="contentMainBar_queryMainBar">
+            <div class="contentMainBar_queryMainBar_InputSearch">
+                <div class="InputSearch_top"><h4>单词查</h4></div>
+                <div class="InputSearch_bottom"><input type="text" placeholder="输入单词.." id="word">
+                    <div class="inputImg_absolute"><img src="../home_Img/本子%20(1).png" alt=""></div>
+                </div>
+            </div>
+
+            <div class="contentMainBar_queryMainBar_InputSearch">
+                <div class="InputSearch_top"><h4>释义查</h4></div>
+                <div class="InputSearch_bottom"><input type="text" placeholder="输入中文" id="meaning">
+                    <div class="inputImg_absolute"><img src="../home_Img/devops（释义）%20(2).png" alt="" style="width: 80%; height: auto;"></div>
+                </div>
+            </div>
+
+            <div class="contentMainBar_queryMainBar_InputSearch">
+                <div class="InputSearch_top"><h4>词性查</h4></div>
+                <div class="InputSearch_bottom"><input type="text" placeholder="输入词性（adj , v）.." id="wordClass">
+                    <div class="inputImg_absolute"><img src="../home_Img/分词和词性标注.png" alt="" style="width: 80%; height: auto;"></div>
+                </div>
+            </div>
+
+            <div class="contentMainBar_queryMainBar_InputSearch" style="width: 10%;">
+                <div class="InputSearch_top"><h4>阶段查</h4></div>
+                <div class="InputSearch_bottom"><select name="" id="selectDegrad">
+                    <option value="无" selected>无</option>
+                    <option value="初中">初中</option>
+                    <option value="高中">高中</option>
+                    <option value="四级">四级</option>
+                </select>
+                    <div class="inputImg_absolute"></div>
+                </div>
+            </div>
+
+            <!-- 搜索栏 -->
+            <div class="contentMainBar_queryMainBar_searchMainBar">
+                <button id="queryAttachCondition">查询</button>
+                <span class="extend_button"><button id="clear" onclick="emptyInput()">清空</button></span>
+            </div>
+        </div>
+        <!-- 表格栏 -->
+        <div class="tableMainBar">
+            <!-- 表格选项栏 -->
+            <div class="tablePageChooseMainBar">
+                <h5>一共<span class="fontColor_span" id="totalPage"></span>页数据，请选择每页显示数量</h5>
+                <select name="" id="pageSizeSelect">
+                    <option value="5">5条/页</option>
+                    <option value="8">8条/页</option>
+                    <option value="10">10条/页</option>
+                    <option value="12" selected>12条/页</option>
+                    <option value="15">15条/页</option>
+                    <option value="20">20条/页</option>
+                    <option value="25">25条/页</option>
+                </select>
+
+                <!-- 第几页 -->
+                <!-- <h5 style="margin-left: 25px;">选择第</h5> -->
+
+                <!-- 上一页 -->
+                <input type="text" name="" id="page" >
+                <h5 style="margin-left: 5px;">页</h5>
+                <button class="previousPageButton" id="previousPage"><h3 style="font-weight: 500"><</h3></button>
+                <!-- 下一页 -->
+                <button class="nestPageButton" id="nextPage"><h3 style="font-weight: 500">></h3></button>
+
+                <!-- 保留页码 -->
+                <label class="switch">
+                    <input type="checkbox" id="savePageSwitch">
+                    <span class="slider"></span>
+                </label>
+                <span style="margin-left:8px;" id="savePrompt" class="fontColor_span"><h5>保留页码已启动</h5></span>
+
+
+                <div class="queryAllWord">
+                    <label for="queryAllWord">
+                        <button id="queryAllWord" class="queryAllButton">
+                            <h4 style="font-weight: 300;">查询全部</h4>
+                        </button>
+                    </label>
+                </div>
+
+                <div class="AdditionWord">
+                    <label for="AdditionWord">
+                        <button id="AdditionWord" class="addButton" onclick="openAddBar()">
+                            <h4 style="font-weight: 300;">新增</h4>
+                        </button>
+                    </label>
+                </div>
+
+                <div class="largelyDelete">
+                    <label for="largelyDelete">
+                        <button id="largelyDelete" class="largelyDeleteButton">
+                            <h4 style="font-weight: 300;">批量删除</h4>
+                        </button>
+                    </label>
+                </div>
+            </div>
+            <table id="wordTable">
+                <thead>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th>id</th>
+                    <th>单词</th>
+                    <th>释义</th>
+                    <th>词性</th>
+                    <th>掌握阶段</th>
+                    <th>相似词</th>
+                    <th>短语</th>
+                    <th>通过率</th>
+                    <th>设置</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--  通过js自动渲染  -->
+                </tbody>
+            </table>
+            <div class="pageChooseMainBar">
+                <h5>当前已显示数据为<span class="pageChooseMainBar_span" id="hasSearchTotal">...</span>条</h5>
+                <h5>第<span class="pageShow_span" id="currentPage"></span>页</h5>
+                <div class="pageClickMainBar">
+                    <button class="clickBar"><</button>
+                    <button class="clickBar">1</button>
+                    <button class="clickBar">2</button>
+                    <button class="clickBar">3</button>
+                    <button class="clickBar">></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="login.html">登录</a></li>
+            /
+            <li><a href="register.html">注册</a></li>
+        </ul>
+        <div class="timeMianBar"><h3 id="time">...</h3></div>
+    </nav>
+</div>
+
+
+<!-- 修改栏 -->
+<div class="updateBackgroudMainBox" id="update">
+    <div class="updateHandleBar">
+        <div class="titleMainBar"><h3>单词修改与更新</h3></div>
+        <!-- update主栏 -->
+        <div class="updateMainBar">
+            <div class="updateMainBar_hang">
+                <!-- 每个单独的input框 -->
+                <label for="wordUpdate">
+                    <h4>单词</h4>
+                    <input type="text" id="wordUpdate" name="wordUpdate">
+                </label>
+
+                <!-- 每个单独的input框 -->
+                <label for="meaningUpdate">
+                    <h4>释义（用“;/；”分割）</h4>
+                    <input type="text" id="meaningUpdate" name="meaningUpdate">
+                </label>
+            </div>
+            <div class="updateMainBar_hang">
+                <label for="partOfSpeechUpdate">
+                    <h4>词性（v/adj/v/...）</h4>
+                    <input type="text" id="partOfSpeechUpdate" name="partOfSpeechUpdate">
+                </label>
+
+                <label for="belongGradeUpdate">
+                    <h4>所属阶段（高中/四级/六级/...）</h4>
+                    <input type="text" id="belongGradeUpdate" name="belongGradeUpdate">
+                </label>
+            </div>
+            <div class="updateMainBar_hang">
+                <label for="similarWordUpdate">
+                    <h4>相似词汇（形近/意近/...）</h4>
+                    <input type="text" id="similarWordUpdate" name="similarWordUpdate">
+                </label>
+
+                <label for="phraseUpdate">
+                    <h4>短语</h4>
+                    <input type="text" id="phraseUpdate" name="phraseUpdate">
+                </label>
+            </div>
+        </div>
+        <!-- 按钮栏 -->
+        <div class="updateButtopnMainBar">
+            <span class="cancel_span"><button id="updateCancel" onclick="cancelUpdate()" >取消</button></span>
+            <span class="confirm_span"><button id="updateConfirm" onclick="updateHandle()">确定修改</button></span>
+        </div>
+    </div>
+</div>
+
+
+<!-- 新增单词界面 -->
+<div class="addBackgroudMainBox" id="add">
+    <div class="addHandleBar">
+        <div class="titleMainBar"><h3>单词新增</h3></div>
+        <!-- add 主栏 -->
+        <div class="addMainBar">
+            <div class="addMainBar_hang">
+                <!-- 每个单独的input框 -->
+                <label for="wordAdd">
+                    <h4>单词</h4>
+                    <input type="text" id="wordAdd" name="wordAdd">
+                </label>
+
+                <!-- 每个单独的input框 -->
+                <label for="meaningAdd">
+                    <h4>释义（用“;/；”分割）</h4>
+                    <input type="text" id="meaningAdd" name="meaningAdd">
+                </label>
+            </div>
+            <div class="addMainBar_hang">
+                <label for="partOfSpeechAdd">
+                    <h4>词性（v/adj/v/...）</h4>
+                    <input type="text" id="partOfSpeechAdd" name="partOfSpeechAdd">
+                </label>
+
+                <label for="belongGradeAdd">
+                    <h4>所属阶段（高中/四级/六级/...）</h4>
+                    <input type="text" id="belongGradeAdd" name="belongGradeAdd">
+                </label>
+            </div>
+            <div class="addMainBar_hang">
+                <label for="similarWordAdd">
+                    <h4>相似词汇（形近/意近/...）</h4>
+                    <input type="text" id="similarWordAdd" name="similarWordAdd">
+                </label>
+
+                <label for="phraseAdd">
+                    <h4>短语</h4>
+                    <input type="text" id="phraseAdd" name="phraseAdd">
+                </label>
+            </div>
+        </div>
+        <!-- 按钮栏 -->
+        <div class="addButtopnMainBar">
+            <span class="cancel_spanAdd"><button id="addCancel" onclick="cancelAdd()">取消</button></span>
+            <span class="confirm_spanAdd"><button id="addConfirm" onclick="addHandle()">确定新增</button></span>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../javaScript/home.js"></script>
+</html>

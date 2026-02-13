@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="home_Img/【哲风壁纸】国风元素-奇幻国风copy.png" type="image/x-icon">
+    <link rel="icon" href="../home_Img/【哲风壁纸】国风元素-奇幻国风copy.png" type="image/x-icon">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@6.0.0/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="../css/data.css">
+    <title>Document</title>
+</head>
+
+<body>
+<aside class="sideMainBar">
+    <!-- Logo和名称 -->
+    <div class="headMainBar">
+        <div class="logoAndTextMainBar">
+            <div class="logoMainBar"><img src="../home_Img/【哲风壁纸】国风元素-奇幻国风.png" alt=""></div>
+            <div class="nameMainBar">
+                <h1>单词管理文档</h1>
+            </div>
+        </div>
+
+        <!-- 输入栏 -->
+        <div class="headInput">
+            <div class="inputMainBar">
+                <input type="text" placeholder="词海查询..." id="search">
+                <img src="../home_Img/搜索.png" alt="">
+                <button class="inputMainBar_button" id="sideButton">搜索</button>
+            </div>
+        </div>
+        <div class="line"></div>
+    </div>
+    <!-- body栏 -->
+    <div class="bodyMainBar">
+        <div class="advMainBar">
+            <div class="advMainBar_leftMainBar">
+                <div class="imgBar"><img src="../home_Img/屏幕截图 2025-12-11 161556.png" alt=""></div>
+                <div class="textBar">
+                    <p>
+                    <h4 style="margin: 0px;color: rgb(44, 44, 44)">词汇巧计</h4>
+                    </p>
+                    <p>
+                    <h5 style="margin: 0px; color: rgb(126, 126, 126);margin-left: -5px;">35名成员</h5>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chooseMainBar">
+            <h4>常规</h4>
+            <ul>
+                <li><a href="home.html"><button><img src="../home_Img/房子.png" alt="">
+                    <p>华词表</p>
+                </button></a></li>
+                <li><a href="check.html"><button><img src="../home_Img/对话框.png" alt="">
+                    <p>词亦抽</p>
+                </button></a></li>
+                <li><a href="note"><button><img src="../home_Img/抽查检查.png" alt="">
+                    <p>孤词薄</p>
+                </button></a></li>
+                <li><a href="look"><button><img src="../home_Img/阅读.png" alt="">
+                    <p>阅速摘</p>
+                </button></a></li>
+                <li><a href="data.html"><button
+                        style="background-color: white;box-shadow: 0px 2px 9px rgba(151, 151, 151, 0.393);">
+                    <img src="../home_Img/数据.png" alt="">
+                    <p style="color: rgba(77, 14, 148, 0.737);">数穆钧</p>
+                    </h4>
+                </button></a></li>
+                <li><a href="msg.html"><button><img src="../home_Img/设置.png" alt="">
+                    <p>个人中心</p>
+                </button></a></li>
+            </ul>
+        </div>
+
+        <!-- 底部广告栏 -->
+        <div class="botton_Adv_MainBar">
+            <div class="botton_Adv_MainBar_TextMainBar">
+                <p>
+                <h4>Project试用计划</h4>
+                </p>
+                <p>
+                <h5>您的计划仅离开12天，请参阅并订阅 <br>我们的高级计划</h5>
+                </p>
+            </div>
+            <div class="botton_Adv_MainBar_EntryMainBar">
+                <a href="#">查看计划</a>
+            </div>
+        </div>
+    </div>
+</aside>
+
+
+<!-- 抽查主内容栏 -->
+<div class="checkMainBar">
+
+    <!-- 第一数据主栏 -->
+    <div class="firstDataMainBar">
+
+        <!-- 用户数据栏 -->
+        <div class="userDataMainBar">
+            <!-- 用户数据文本栏 -->
+            <div class="userDataMainBarTextBar">
+                <!-- 标题（说明主要数据内容） -->
+                <div class="userDataMainBarTextBar_title">
+                    <h3>数据总览</h3>
+                </div>
+                <!-- 数据 -->
+                <div class="userDataMainBarTextBar_data">
+
+                    <!-- 第一项数据 -->
+                    <div class="everyDataBar">
+                        <!-- 上部 -->
+                        <div class="everyDataBar_upBar">
+                            <h5>公共单词总数</h5>
+                        </div>
+                        <!-- 底部 -->
+                        <div class="everyDataBar_buttonBar">
+                            <!-- 图片 -->
+                            <div class="imgBar" style="background-color: rgba(255, 212, 152, 0.632);">
+                                <img src="../home_Img/任务总数.png" alt="">
+                            </div>
+                            <!-- 数字 -->
+                            <div class="numberBar">
+                                <h1 id="wordTotal"></h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 第二项数据 -->
+                    <div class="everyDataBar">
+                        <!-- 上部 -->
+                        <div class="everyDataBar_upBar">
+                            <h5>用户平均准确率</h5>
+                        </div>
+                        <!-- 底部 -->
+                        <div class="everyDataBar_buttonBar">
+                            <!-- 图片 -->
+                            <div class="imgBar" style="background-color: rgba(152, 255, 253, 0.484);">
+                                <img src="../home_Img/点赞.png" alt="">
+                            </div>
+                            <!-- 数字 -->
+                            <div class="numberBar">
+                                <h1 id="accuracyAvg"></h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 第三项数据 -->
+                    <div class="everyDataBar">
+                        <!-- 上部 -->
+                        <div class="everyDataBar_upBar">
+                            <h5>平均阅读总数</h5>
+                        </div>
+                        <!-- 底部 -->
+                        <div class="everyDataBar_buttonBar">
+                            <!-- 图片 -->
+                            <div class="imgBar" style="background-color: rgba(152, 193, 255, 0.495);">
+                                <img src="../home_Img/阅读 (2).png" alt="">
+                            </div>
+                            <!-- 数字 -->
+                            <div class="numberBar">
+                                <h1 id="reedAvg">24</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 第四项数据 -->
+                    <div class="everyDataBar">
+                        <!-- 上部 -->
+                        <div class="everyDataBar_upBar">
+                            <h5>用户总数</h5>
+                        </div>
+                        <!-- 底部 -->
+                        <div class="everyDataBar_buttonBar">
+                            <!-- 图片 -->
+                            <div class="imgBar" style="background-color: rgba(219, 152, 255, 0.534);">
+                                <img src="../home_Img/个人中心-我的 (1).png" alt="">
+                            </div>
+                            <!-- 用户总数 -->
+                            <div class="numberBar">
+                                <h1 id="userTotal"></h1>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 用户数据Echart -->
+            <div class="userDataMainBarEchart" id="userData"></div>
+        </div>
+
+        <!-- 第一大栏第二主栏 -->
+        <div class="firstDataMainBarSecondMianBar">
+            <!-- 今日抽查单词总数Echart -->
+            <div class="firstDataMainBarSecondMianBar_upMainBar" id="checkData"></div>
+            <!-- 个人用户准确率占比图Echart -->
+            <div class="firstDataMainBarSecondMianBar_buttonMainBar" id="accurcyData"></div>
+        </div>
+
+
+    </div>
+    <!-- 第一数据主栏 -->
+
+    <!-- 第二数据主栏 -->
+    <!-- 第二数据主栏 -->
+    <!-- 第二数据主栏 -->
+    <div class="secondDataMainBar">
+        <!-- 栏1 -->
+        <div class="secondDataMainBar_exampleBar">
+            <div class="secondDataMainBar_exampleBar_upBar">
+                <h4>单词本数量</h4>
+            </div>
+            <div class="secondDataMainBar_exampleBar_buttonBar" id="noteNumber">
+            </div>
+        </div>
+
+        <!-- 栏2-->
+        <div class="secondDataMainBar_exampleBar">
+            <div class="secondDataMainBar_exampleBar_upBar">
+                <h4>阅读正确率</h4>
+            </div>
+            <div class="secondDataMainBar_exampleBar_buttonBar" id="reedAccuracy"></div>
+        </div>
+
+        <!-- 栏3 -->
+        <div class="secondDataMainBar_exampleBar">
+            <div class="secondDataMainBar_exampleBar_upBar">
+                <h4>阅读数量</h4>
+            </div>
+            <div class="secondDataMainBar_exampleBar_buttonBar" id="reedNumber"></div>
+        </div>
+
+        <!-- 栏4 -->
+        <div class="secondDataMainBar_exampleBar">
+            <div class="secondDataMainBar_exampleBar_upBar">
+                <h4>您的综合分数（绿色为平均水平）</h4>
+            </div>
+            <div class="secondDataMainBar_exampleBar_buttonBar" id="score"></div>
+        </div>
+    </div>
+
+
+    <!-- 第三大数据主栏 -->
+    <!-- 第三大数据主栏 -->
+    <!-- 第三大数据主栏 -->
+    <div class="thirdDataMainBar">
+        <div class="thirdDataMainBar_mainBar">
+            <div class="thirdDataMainBar_upBar">
+                <h4>实时内容数据</h4>
+            </div>
+
+            <div class="thirdDataMainBar_buttonBar">
+                <div class="thirdDataMainBar_buttonBar_example" id="chuGao"></div>
+                <div class="thirdDataMainBar_buttonBar_example" id="siLiu"></div>
+                <div class="thirdDataMainBar_buttonBar_example" id="yasi"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../javaScript/data.js"></script>
+</html>

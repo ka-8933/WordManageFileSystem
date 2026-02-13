@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="home_Img/【哲风壁纸】国风元素-奇幻国风copy.png" type="image/x-icon">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="../css/msg.css">
+  <title>Document</title>
+</head>
+
+<body>
+<aside class="sideMainBar">
+  <!-- Logo和名称 -->
+  <div class="headMainBar">
+    <div class="logoAndTextMainBar">
+      <div class="logoMainBar"><img src="../home_Img/【哲风壁纸】国风元素-奇幻国风.png" alt=""></div>
+      <div class="nameMainBar">
+        <h1>单词管理文档</h1>
+      </div>
+    </div>
+
+    <!-- 输入栏 -->
+    <div class="headInput">
+      <div class="inputMainBar">
+        <input type="text" placeholder="词海查询..." id="search">
+        <img src="../home_Img/搜索.png" alt="">
+        <button class="inputMainBar_button" id="sideButton">搜索</button>
+      </div>
+    </div>
+    <div class="line"></div>
+  </div>
+  <!-- body栏 -->
+  <div class="bodyMainBar">
+    <div class="advMainBar">
+      <div class="advMainBar_leftMainBar">
+        <div class="imgBar"><img src="../home_Img/屏幕截图 2025-12-11 161556.png" alt=""></div>
+        <div class="textBar">
+          <p ><h4 style="margin: 0px;color: rgb(44, 44, 44)">词汇巧计</h4></p>
+          <p ><h5 style="margin: 0px; color: rgb(126, 126, 126);margin-left: -5px;">35名成员</h5></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="chooseMainBar">
+      <h4>常规</h4>
+      <ul>
+        <li><a href="home.html"><button><img src="../home_Img/房子.png" alt=""><p>华词表</p></button></a></li>
+        <li><a href="check.html"><button><img src="../home_Img/设置.png" alt=""><p>词亦抽</p></button></a></li>
+        <li><a href="note"><button><img src="../home_Img/抽查检查.png" alt=""><p>孤词薄</p></button></a></li>
+        <li><a href="look"><button><img src="../home_Img/阅读.png" alt=""><p>阅速摘</p></button></a></li>
+        <li><a href="data.html"><button><img src="../home_Img/数据.png" alt=""><p>数穆钧</p></button></a></li>
+        <li><a href=""><button style="background-color: white;box-shadow: 0px 2px 9px rgba(151, 151, 151, 0.393);">
+          <img src="../home_Img/对话框.png" alt=""><p style="color: rgba(77, 14, 148, 0.737);">个人中心</p></h4></button></a></li>
+      </ul>
+    </div>
+
+    <!-- 底部广告栏 -->
+    <div class="botton_Adv_MainBar">
+      <div class="botton_Adv_MainBar_TextMainBar">
+        <p><h4>Project试用计划</h4></p>
+        <p><h5>您的计划仅离开12天，请参阅并订阅 <br>我们的高级计划</h5></p>
+      </div>
+      <div class="botton_Adv_MainBar_EntryMainBar">
+        <a href="#">查看计划</a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- 个人中心主内容栏 -->
+<div class="userMsgMainBar">
+  <!-- 顶部装饰栏 -->
+  <div class="upDecorationBar"></div>
+
+  <!-- 填写信息主栏 -->
+  <div class="postMsgMainBar">
+
+    <!-- 左显示头像栏 -->
+    <div class="postMsgMainBar_leftMainBar">
+      <!-- 头像栏上主栏 -->
+      <div class="postMsgMainBar_leftMainBar_upMainBar">
+        <!-- 个人中心文本 -->
+        <div class="postMsgMainBar_leftMainBar_upMainBar_textMainBar">个人资料</div>
+        <!-- 头像 -->
+        <div class="postMsgMainBar_leftMainBar_upMainBar_imgMainBar">
+          <div class="imgMainBar"><img src="../home_Img/【哲风壁纸】明星-章若楠 (1).png" alt=""></div>
+        </div>
+
+        <!-- 昵称 -->
+        <div class="nameTextMainBar">小卡爱吃糖</div>
+
+        <!-- 介绍文本 -->
+        <div class="IntroductionTextMainBar">
+          <div class="IntroductionTextMainBar_textBar">
+            <h5>是一个喜欢吃奥给力的纨绔man，偶像是哈基米</h5>
+          </div>
+        </div>
+      </div>
+      <!-- 头像栏下主栏 -->
+      <div class="postMsgMainBar_leftMainBar_Button"><button onclick="Logout()">退出登录</button></div>
+    </div>
+
+    <!-- 输入个人信息右栏 -->
+    <div class="postMsgMainBar_rightMainBar">
+      <!-- 顶部栏 -->
+      <div class="upMainBar">
+        <div class="buttonLine"></div>
+        <!-- 个人资料主栏 -->
+        <div class="positionViewMainBar">
+          <!-- 个人资料 -->
+          <div class="titleShooseBar"><h4>个人资料</h4></div>
+        </div>
+      </div>
+
+      <!-- 基础信息 -->
+      <div class="postMsgMainBar_rightMainBar_baseMsgMainBar">
+        <div class="dot"></div>
+        <h3>基础信息</h3>
+        <div class="line"></div>
+      </div>
+
+      <!-- 保存 -->
+      <div class="postMsgMainBar_rightMainBar_saveMainBar">
+        <button>保存</button>
+      </div>
+
+      <!-- 填写信息主栏 -->
+      <!-- 填写信息主栏 -->
+      <div class="postMsgMainBar_rightMainBar_postMainBar">
+        <div class="postMsgMainBar_rightMainBar_postMainBar_rightMainBar">
+          <div class="inputCommon">
+            <div class="leftTextBar">昵称</div>
+            <div class="texInput"><input type="text" name="" id="name"></div>
+          </div>
+
+          <div class="inputCommon">
+            <div class="leftTextBar">电话</div>
+            <div class="texInput"><input type="text" name="" id="phoneNumber"></div>
+          </div>
+          <div class="inputCommon">
+            <div class="leftTextBar">生日</div>
+            <div class="texInput"><input type="date" name="" id="birthDay"></div>
+          </div>
+
+          <div class="inputCommon" style="height: 130px;">
+            <div class="leftTextBar">头像</div>
+            <div class="imgInput">
+              <img src="../home_Img/按钮背景图片设置方法 (2).png" alt="">
+              <input type="file" id="img">
+            </div>
+          </div>
+        </div>
+
+        <div class="postMsgMainBar_rightMainBar_postMainBar_rightMainBar" style="margin-left: 90px;">
+          <div class="inputCommon">
+            <div class="leftTextBar">学历</div>
+            <div class="texInput"><input type="text" name="" id="grade"></div>
+          </div>
+
+          <div class="inputCommon">
+            <div class="leftTextBar">性别</div>
+            <div class="texInput"><select name="" id="gender">
+              <option value="男">男</option>
+              <option value="女">女</option>
+            </select></div>
+          </div>
+          <div class="inputCommon">
+            <div class="leftTextBar">城市</div>
+            <div class="texInput"><input type="text" id="city"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+<script src="../javaScript/msg.js"></script>
+</html>

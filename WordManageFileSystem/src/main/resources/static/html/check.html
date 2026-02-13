@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../home_Img/【哲风壁纸】国风元素-奇幻国风copy.png" type="image/x-icon">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../css/check.css">
+    <title>Document</title>
+</head>
+<body>
+<aside class="sideMainBar">
+    <!-- Logo和名称 -->
+    <div class="headMainBar">
+        <div class="logoAndTextMainBar">
+            <div class="logoMainBar"><img src="../home_Img/【哲风壁纸】国风元素-奇幻国风.png" alt=""></div>
+            <div class="nameMainBar">
+                <h1>单词管理文档</h1>
+            </div>
+        </div>
+
+        <!-- 输入栏 -->
+        <div class="headInput">
+            <div class="inputMainBar">
+                <input type="text" placeholder="词海查询..." id="search">
+                <img src="../home_Img/搜索.png" alt="">
+                <button class="inputMainBar_button" id="sideButton">搜索</button>
+            </div>
+        </div>
+        <div class="line"></div>
+    </div>
+    <!-- body栏 -->
+    <div class="bodyMainBar">
+        <div class="advMainBar">
+            <div class="advMainBar_leftMainBar">
+                <div class="imgBar"><img src="../home_Img/屏幕截图%202025-12-11%20161556.png" alt=""></div>
+                <div class="textBar">
+                    <p ><h4 style="margin: 0px;color: rgb(44, 44, 44)">词汇巧计</h4></p>
+                    <p ><h5 style="margin: 0px; color: rgb(126, 126, 126);margin-left: -5px;">35名成员</h5></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chooseMainBar">
+            <h4>常规</h4>
+            <ul>
+                <li><a href="home.html"><button><img src="../home_Img/房子.png" alt=""><p>华词表</p></button></a></li>
+                <li><a href="check.html"><button style="background-color: white;box-shadow: 0px 2px 9px rgba(151, 151, 151, 0.393);">
+                    <img src="../home_Img/对话框.png" alt=""><p style="color: rgba(77, 14, 148, 0.737);">词亦抽</p></h4></button></a></li>
+                <li><a href="note"><button><img src="../home_Img/抽查检查.png" alt=""><p>孤词薄</p></button></a></li>
+                <li><a href="look"><button><img src="../home_Img/阅读.png" alt=""><p>阅速摘</p></button></a></li>
+                <li><a href="data.html"><button><img src="../home_Img/数据.png" alt=""><p>数穆钧</p></button></a></li>
+                <li><a href="msg.html"><button><img src="../home_Img/设置.png" alt=""><p>个人中心</p></button></a></li>
+            </ul>
+        </div>
+
+        <!-- 底部广告栏 -->
+        <div class="botton_Adv_MainBar">
+            <div class="botton_Adv_MainBar_TextMainBar">
+                <p><h4>Project试用计划</h4></p>
+                <p><h5>您的计划仅离开12天，请参阅并订阅 <br>我们的高级计划</h5></p>
+            </div>
+            <div class="botton_Adv_MainBar_EntryMainBar">
+                <a href="#">查看计划</a>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<!-- 抽查主内容栏 -->
+<div class="checkMainBar">
+
+    <div class="checkBox">
+
+        <div class="checkBox_topContentBar">
+            <h3>词亦抽·肴崞</h3>
+            <div class="rightAndTotalMainBar">
+                <div class="rightAndTotalDispaly">
+                    <img src="../home_Img/总数.png" alt="">
+                    <h5 id="totalNum">..</h5>
+                </div>
+                <div class="rightAndTotalDispaly">
+                    <img src="../home_Img/对.png" alt="">
+                    <h5 id="rightNum">..</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="wordDispalyMainBarImgBar">
+            <img src="../home_Img/屏幕截图%202025-12-19%20110533.png" alt="">
+
+            <div class="wordDispalyMainBarTextBar">
+                <h5></h5>
+                <h1 id="wordDisplay">点击开始抽查单词</h1>
+                <h3></h3>
+            </div>
+        </div>
+
+        <div class="inputMeaningMainBar">
+            <div class="inputMeaningMainBar_up">
+                <h5>释义输入</h5>
+            </div>
+            <div class="inputMeaningMainBar_botton">
+                <input type="text" placeholder="请输入释义" id="inputMeaning">
+                <button id="submit" onclick="submiton()">提交</button>
+            </div>
+        </div>
+
+        <div class="buttonMainBar">
+            <button style=" display: inline-block;background-color:rgba(83, 180, 80, 0.872);margin-left: 4.5%" id="start" onclick="start()">开始抽查</button>
+            <button style=" display: inline-block;background-color:rgba(37, 143, 182, 0.902);" onclick="skip()">跳过</button>
+            <button style=" display: inline-block;background-color:rgba(175, 80, 204, 0.945);" onclick="end()">结束抽查</button>
+        </div>
+    </div>
+
+
+
+</div>
+</body>
+<script src="../javaScript/check.js"></script>
+</html>

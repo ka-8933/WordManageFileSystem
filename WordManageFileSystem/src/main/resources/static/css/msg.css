@@ -1,0 +1,1132 @@
+body {
+    margin: 0px;
+    /* display:flex; */
+    background-color: rgba(195, 199, 202, 0.155)
+}
+
+@keyframes beginningAni {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.onclickSizeBarHome {
+    background-color: white;
+    box-shadow: 0px 2px 9px rgba(151, 151, 151, 0.393);
+    /* color: rgb(43, 150, 98); */
+}
+
+.line {
+    position: relative;
+    width: 280px;
+    height: 1.3px;
+    background-color: rgba(184, 184, 184, 0.356);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* 侧边栏设置 */
+.sideMainBar {
+    position: fixed;
+    width: 280px;
+    height: 927px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    margin-left: 0.1%;
+    border: 0.3px solid rgba(199, 199, 199, 0.475);
+    box-shadow: 0px 1px 10px rgba(161, 161, 161, 0.596);
+}
+
+/* 头部设置 */
+.sideMainBar .headMainBar {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    /* border-bottom: 1.5px solid rgba(184, 184, 184, 0.356); */
+}
+
+/* logo和文字 */
+.headMainBar .logoAndTextMainBar {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* logo */
+.logoAndTextMainBar .logoMainBar {
+    position: relative;
+    width: 15%;
+    height: 67%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 0.4px solid rgba(41, 41, 41, 0.708);
+}
+
+.logoMainBar img {
+    width: 100%;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.logoMainBar img:hover {
+    transform: rotate(420deg);
+}
+
+/* 名称 */
+.logoAndTextMainBar .nameMainBar {
+    position: relative;
+    width: 82%;
+    height: 100%;
+    /* background-color: rgb(142, 220, 214); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.nameMainBar h1 {
+    font-size: 19px;
+    color: rgb(28, 28, 28);
+    font-weight: 600;
+}
+
+/* 设置 */
+.headMainBar .setMainBar {
+    position: relative;
+    width: 9%;
+    height: 50%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.setMainBar button {
+    position: relative;
+    /* background-color: blueviolet; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: rgba(234, 234, 234, 0.781);
+    transition: 0.3s;
+}
+
+.setMainBar button:hover {
+    border: 0.7px solid rgb(218, 172, 252);
+}
+
+.setMainBar button img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.sideMainBar .searchMainBar {
+    position: relative;
+
+}
+
+.sideMainBar .headInput {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /* background-color: rgb(182, 231, 216); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.headInput .inputMainBar {
+    position: relative;
+    width: 85%;
+    height: 80%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: beginningAni 0.8s ease forwards;
+    visibility: visible;
+}
+
+.inputMainBar input {
+    position: relative;
+    width: 100%;
+    height: 88%;
+    border-radius: 7px;
+    outline: none;
+    border: 0.3px solid rgba(201, 201, 201, 0.795);
+    box-shadow: 0px 0px 4px rgba(172, 172, 172, 0.352);
+    line-height: 50px;
+    padding-left: 14%;
+    transition: 0.3s;
+}
+
+.inputMainBar input:focus {
+    border: 0.3px solid rgba(112, 112, 112, 0.598);
+    animation: inputvivid 1s ease 0s forwards;
+    visibility: visible;
+}
+
+@keyframes inputvivid {
+    0% {
+        box-shadow: 0px 0px 0px;
+    }
+
+    33% {
+        box-shadow: 0px 0px 10px rgba(132, 229, 192, 0.598);
+    }
+
+    66% {
+        box-shadow: 0px 0px 8px rgba(132, 229, 192, 0.598);
+    }
+
+    100% {
+        box-shadow: 0px 0px 4px rgba(132, 229, 192, 0.598);
+    }
+}
+
+@keyframes inputvivid {
+    0% {
+        box-shadow: 0px 0px 0px;
+    }
+
+    33% {
+        box-shadow: 0px 0px 10px rgba(192, 132, 229, 0.598);
+    }
+
+    66% {
+        box-shadow: 0px 0px 8px rgba(187, 132, 229, 0.598);
+    }
+
+    100% {
+        box-shadow: 0px 0px 2px rgba(95, 22, 150, 0.598);
+    }
+}
+
+
+
+.inputMainBar input::placeholder {
+    color: rgb(103, 103, 103);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.inputMainBar .inputMainBar_button {
+    position: absolute;
+    width: 20%;
+    height: 75%;
+    margin-left: 76%;
+    border-radius: 6px;
+    border: none;
+    background-color: rgba(199, 232, 221, 0.861);
+    box-shadow: 0px 0px 6px rgba(186, 186, 186, 0.468);
+    transition: 0.3s;
+    color: rgb(51, 51, 51);
+}
+
+.inputMainBar .inputMainBar_button:hover {
+    background: linear-gradient(to right, rgba(113, 219, 178, 0.598), rgba(231, 247, 240, 0.598));
+    color: rgb(30, 129, 92);
+    transform: translateY(-1px);
+    box-shadow: 0px 1px 5px rgba(115, 115, 115, 0.468);
+}
+
+.inputMainBar .inputMainBar_button:active {
+    transform: scale(90%);
+
+}
+
+.inputMainBar img {
+    position: absolute;
+    width: 6.5%;
+    height: auto;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -85%;
+    /* top: -0.5px; */
+    margin-top: -2px;
+}
+
+/* 侧边栏第二主栏 */
+.sideMainBar .bodyMainBar {
+    position: relative;
+    /* background-color: rgb(205, 226, 226); */
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 43%;
+
+}
+
+.bodyMainBar .advMainBar {
+    position: relative;
+    width: 85%;
+    height: 55px;
+    /* background: rgb(227, 174, 174); */
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 17px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(157, 157, 157, 0.418);
+    animation: beginningAni 0.8s ease 0.05s forwards;
+    visibility: visible;
+
+    /* 不定期动态 */
+    animation: advMainBar_ani 1.5s ease 1s 1000000 forwards;
+    visibility: visible;
+}
+
+@keyframes advMainBar_ani {
+    0% {
+        box-shadow: 0px 0px 10px rgba(157, 157, 157, 0.418);
+    }
+
+    50% {
+        box-shadow: 2px 1px 23px rgba(140, 83, 204, 0.356);
+    }
+
+    100% {
+        box-shadow: 0px 0px 10px rgba(157, 157, 157, 0.418);
+    }
+}
+
+.advMainBar .advMainBar_leftMainBar {
+    position: relative;
+    width: 50%;
+    height: 75%;
+    /* background-color: beige; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.advMainBar_leftMainBar .imgBar {
+    position: relative;
+    width: 35%;
+    height: 100%;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.imgBar img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.advMainBar_leftMainBar .textBar {
+    position: relative;
+    width: 65%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    line-height: 20px;
+}
+
+.textBar p {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.bodyMainBar .chooseMainBar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.bodyMainBar .chooseMainBar ul {
+    width: 87%;
+    height: auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(211, 211, 238); */
+    /* margin-right: 50px; */
+    gap: 2px;
+    margin: 0px;
+    margin-left: 5px;
+
+}
+
+.bodyMainBar .chooseMainBar ul li {
+    margin: 0px;
+    animation: beginningAni 0.8s ease 0.2s forwards;
+    visibility: visible;
+}
+
+.bodyMainBar .chooseMainBar ul li a {
+    margin: 0px;
+    text-decoration: none;
+}
+
+.bodyMainBar .chooseMainBar ul li button {
+    width: 100%;
+    height: 37px;
+    margin-left: -25px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    /* background-color: white; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: rgba(244, 244, 244, 0.502); */
+    background: none;
+    transition: 0.15s;
+
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 610;
+    color: rgb(83, 82, 82);
+}
+
+.bodyMainBar .chooseMainBar ul li button p {
+    margin-left: 10px;
+
+}
+
+.bodyMainBar .chooseMainBar ul li button:hover {
+    background-color: white;
+    box-shadow: 0px 2px 6px rgba(178, 178, 178, 0.568);
+    color: rgba(77, 14, 148, 0.737);
+}
+
+.bodyMainBar .chooseMainBar ul li button img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+
+}
+
+.bodyMainBar .chooseMainBar ul li button h4 {
+    margin-left: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 610;
+    color: rgb(83, 82, 82);
+}
+
+.chooseMainBar h4 {
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    /* margin: 15px; */
+    color: rgb(123, 122, 122);
+}
+
+/* 底部广告栏 */
+.bodyMainBar .botton_Adv_MainBar {
+    position: relative;
+    width: 92%;
+    height: 180px;
+    background: linear-gradient(to top, white, white, rgba(209, 221, 235, 0.429));
+    margin-top: 250px;
+    border-radius: 3px;
+    text-align: start;
+    /* padding: 4px; */
+    /* padding-left: 20px; */
+    justify-content: flex-start;
+    /* padding-top: 10px; */
+    flex-direction: column;
+    color: rgb(50, 50, 50);
+    /* line-height: 4px; */
+    /* gap: 4px; */
+    text-align: justify;
+    box-shadow: 0px 5px 6px rgba(110, 110, 110, 0.473);
+    animation: beginningAni 0.8s ease 0.35s forwards;
+    visibility: visible;
+}
+
+
+.botton_Adv_MainBar_TextMainBar p {
+    margin-left: 20px;
+    margin: 0px;
+}
+
+.botton_Adv_MainBar_TextMainBar h4 {
+    margin-bottom: 0px;
+    margin-top: 15px;
+}
+
+.botton_Adv_MainBar_TextMainBar h5 {
+    margin-top: 10px;
+    color: rgb(96, 96, 96);
+}
+
+.botton_Adv_MainBar .botton_Adv_MainBar_TextMainBar {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    /* background-color: rgb(193, 161, 224); */
+    text-align: start;
+    /* padding: 4px; */
+    /* padding-left: 20px; */
+    justify-content: flex-start;
+    /* padding-top: 10px; */
+    flex-direction: column;
+    color: rgb(50, 50, 50);
+    /* line-height: 4px; */
+    /* gap: 4px; */
+    text-align: justify;
+    padding-left: 15px;
+}
+
+.botton_Adv_MainBar .botton_Adv_MainBar_EntryMainBar {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    /* border: 0.3px solid rgba(199, 199, 199, 0.475); */
+    /* left: -1px; */
+    box-shadow: 0px 5px 1px rgba(239, 239, 239, 0.596);
+    border-radius: 0px 0px 7px 7px;
+}
+
+/* rgb(221, 237, 250) */
+.botton_Adv_MainBar_EntryMainBar a {
+    position: relative;
+    width: 83%;
+    height: 70%;
+    /* background-color: rgb(221, 237, 250); */
+    background: linear-gradient(to left, rgb(221, 237, 250), rgb(160, 199, 231));
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(82, 82, 82);
+    font-weight: 580;
+    box-shadow: 0px 2px 9px rgba(133, 133, 133, 0.441);
+    transition: 0.2s;
+}
+
+.botton_Adv_MainBar_EntryMainBar a:hover {
+    /* background-color: rgb(156, 187, 211); */
+    transform: translateY(-3px);
+    box-shadow: 0px 2px 14px rgba(78, 78, 78, 0.441);
+}
+
+
+/* 抽查主内容 */
+/* 抽查主内容 */
+/* 抽查主内容 */
+/* 抽查主内容 */
+/* 抽查主内容 */
+/* 抽查主内容 */
+/* 抽查主内容 */
+/* 抽查主内容 */
+
+.userMsgMainBar {
+    position: relative;
+    width: 81%;
+    height: auto;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 19%;
+}
+
+/* 顶部装饰栏 */
+.userMsgMainBar .upDecorationBar{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2px solid rgb(232, 232, 232);
+}
+
+/* 填写信息主栏 */
+/* 填写信息主栏 */
+/* 填写信息主栏 */
+/* 填写信息主栏 */
+.userMsgMainBar .postMsgMainBar{
+    position: relative;
+    width: 100%;
+    height: 560px;
+    /* background-color: white; */
+    display: flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    /* border: 0.2px solid rgb(232, 232, 232); */
+    margin-top: 30px;
+}
+
+/* 左显示头像栏 */
+/* 左显示头像栏 */
+/* 左显示头像栏 */
+/* 左显示头像栏 */
+.postMsgMainBar .postMsgMainBar_leftMainBar{
+    position: relative;
+    width: 23%;
+    height: 76%;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    /* border: 0.2px solid rgb(232, 232, 232); */
+    margin-top: 20px;
+    margin: 0px;
+}
+
+/* 头像栏上主栏 */
+/* 头像栏上主栏 */
+/* 头像栏上主栏 */
+.postMsgMainBar_leftMainBar .postMsgMainBar_leftMainBar_upMainBar{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    border: 0.2px solid rgb(232, 232, 232);
+    margin-top: 20px;
+    border-radius: 4px;
+    margin: 0px;
+}
+
+/* 个人中心文本 */
+.postMsgMainBar_leftMainBar_upMainBar .postMsgMainBar_leftMainBar_upMainBar_textMainBar{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    /* 文字设置 */
+    color: rgb(133, 133, 133);
+    font-weight: 480;
+    font-size: 15px;
+}
+
+/* 头像 */
+.postMsgMainBar_leftMainBar_upMainBar .postMsgMainBar_leftMainBar_upMainBar_imgMainBar{
+    position: relative;
+    width: 100%;
+    height: 30%;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.postMsgMainBar_leftMainBar_upMainBar_imgMainBar .imgMainBar{
+    position: relative;
+    width: 31%;
+    height: 100%;
+    /* background-color: #4caf9e; */
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+
+}
+
+.imgMainBar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px;
+    image-rendering: -webkit-optimize-contrast; /* 抗锯齿 */
+}
+
+/* 昵称 */
+.postMsgMainBar_leftMainBar_upMainBar .nameTextMainBar{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    /* 文本设置 */
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+
+}
+
+/* 介绍文本 */
+.postMsgMainBar_leftMainBar_upMainBar .IntroductionTextMainBar{
+    position: relative;
+    width: 100%;
+    height: 18%;
+    /* background-color: azure; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.IntroductionTextMainBar .IntroductionTextMainBar_textBar{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.IntroductionTextMainBar_textBar h5{
+    color: rgb(160, 160, 160);
+    font-weight: 470;
+    font-size: 14px;
+    font-variant: 2em;
+    letter-spacing: 1.1px;
+
+
+    white-space: nowrap;        /* 强制文字不换行 */
+    overflow: hidden;           /* 隐藏超出容器的内容 */
+    text-overflow: ellipsis;    /* 超出部分显示省略号 */
+}
+
+
+
+/* 头像栏下按钮 */
+/* 头像栏下按钮 */
+/* 头像栏下按钮 */
+.postMsgMainBar_leftMainBar .postMsgMainBar_leftMainBar_Button{
+    position: relative;
+    width: 100%;
+    height: 9%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    /* border-radius: 4px; */
+    /* border: 0.2px solid rgb(232, 232, 232); */
+    margin-top: 4%;
+    border-radius: 4px;
+
+}
+
+.postMsgMainBar_leftMainBar_Button button{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 0.2px solid rgb(232, 232, 232);
+    transition: 0.15s;
+    /* 文字设置 */
+    color: rgb(96, 96, 96);
+    font-weight: 480;
+}
+
+.postMsgMainBar_leftMainBar_Button button:hover{
+    background-color: #4caf9e;
+    color: white;
+}
+
+
+
+/* 输入个人信息右栏 */
+/* 输入个人信息右栏 */
+/* 输入个人信息右栏 */
+/* 输入个人信息右栏 */
+/* 输入个人信息右栏 */
+/* 输入个人信息右栏 */
+/* 输入个人信息右栏 */
+/* 输入个人信息右栏 */
+.postMsgMainBar .postMsgMainBar_rightMainBar{
+    position: relative;
+    width: 71%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    border: 0.2px solid rgb(232, 232, 232);
+    margin-top: 20px;
+    border-radius: 4px;
+    margin: 0px;
+    margin-left: 2.5%;
+}
+
+/* 顶部栏 */
+.postMsgMainBar_rightMainBar .upMainBar{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+
+}
+
+.upMainBar .buttonLine{
+    position: relative;
+    width: 100%;
+    height: 1.2px;
+    background-color: rgba(223, 223, 223, 0.952);
+    margin-top: 48px;
+}
+
+/* 个人资料主栏 */
+.postMsgMainBar_rightMainBar .positionViewMainBar{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: beige; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.positionViewMainBar .titleShooseBar{
+    position: relative;
+    width: 80px;
+    height: 96%;
+    /* background-color: #9ac4bda4; */
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-left: 60px;
+    border-bottom: 2px solid  #0055d5a4;
+}
+
+.titleShooseBar h4{
+    /*文本设置*/
+    color: rgb(61, 128, 244);
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* 基础信息 */
+/* 基础信息 */
+/* 基础信息 */
+.postMsgMainBar_rightMainBar .postMsgMainBar_rightMainBar_baseMsgMainBar{
+    position: relative;
+    width: 94%;
+    height: 50px;
+    /* background-color: aliceblue; */
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+/* 圆点 */
+.postMsgMainBar_rightMainBar_baseMsgMainBar .dot{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(232, 97, 97);
+    border-radius: 100px;
+}
+
+.postMsgMainBar_rightMainBar_baseMsgMainBar h3{
+    letter-spacing: 0.4px;
+    color: rgb(49, 49, 49);
+    margin-left: 15px;
+}
+
+/* 横线 */
+.postMsgMainBar_rightMainBar_baseMsgMainBar .line{
+    position: absolute;
+    width: 90%;
+    height: 0.6px;
+    background-color: rgba(215, 215, 215, 0.742);
+    margin-top: 60px;
+}
+
+
+/* 保存 */
+/* 保存 */
+/* 保存 */
+/* 保存 */
+.postMsgMainBar_rightMainBar .postMsgMainBar_rightMainBar_saveMainBar{
+    position: relative;
+    width: 94%;
+    height: 40px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.postMsgMainBar_rightMainBar_saveMainBar button {
+    position: relative;
+    width: 150px;
+    height: 40px; /* 建议给一个明确的高度，避免布局问题 */
+    background: none; /* 这里保持无背景，因为我们用伪元素放图标 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px; /* 图标和文字之间的间距 */
+    border: 1.2px solid rgb(61, 128, 244);
+    border-radius: 4px;
+    transition: 0.2s;
+    color: rgb(61, 128, 244);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* 添加图片 */
+.postMsgMainBar_rightMainBar_saveMainBar button::before {
+    content: "";
+    width: 1.3em;
+    height: 1.3em;
+    background-image: url("../home_Img/保存_下载.png");
+    background-size: cover;
+    margin-top: 4px;
+}
+
+.postMsgMainBar_rightMainBar_saveMainBar button:hover{
+    background-color: rgb(61, 128, 244);
+    border: none;
+    color: white;
+}
+
+.postMsgMainBar_rightMainBar_saveMainBar button:active{
+    transform: scale(0.97);
+}
+
+.postMsgMainBar_rightMainBar_saveMainBar button:Hover::before{
+    background-image: url("../home_Img/保存_下载 (1).png");
+}
+
+
+/* 填写信息主栏 */
+/* 填写信息主栏 */
+/* 填写信息主栏 */
+/* 填写信息主栏 */
+.postMsgMainBar_rightMainBar .postMsgMainBar_rightMainBar_postMainBar{
+    position: relative;
+    width: 86%;
+    height: 300px;
+    /* background-color: rgb(238, 250, 251); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: -20px;
+    margin-top: 25px;
+}
+
+/* 右input主栏 */
+/* 右input主栏 */
+/* 右input主栏 */
+/* 右input主栏 */
+/* 右input主栏 */
+/* 右input主栏 */
+.postMsgMainBar_rightMainBar_postMainBar .postMsgMainBar_rightMainBar_postMainBar_rightMainBar{
+    position: relative;
+    width: 45%;
+    height: 100%;
+    /* background-color: #e5f5f2; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    letter-spacing: 1.1px;
+    gap: 2%;
+}
+
+/* 通用input样式 */
+.postMsgMainBar_rightMainBar_postMainBar_rightMainBar .inputCommon{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    /* background-color: #4caf9e; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+/* 左文字 */
+.inputCommon .leftTextBar{
+    position: relative;
+    width: 13%;
+    height: 100%;
+    /* background-color: rgb(250, 239, 239); */
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+
+    /* 文本设置 */
+    color: rgb(50, 50, 50);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* input设置 */
+.inputCommon .texInput{
+    position: relative;
+    width: 86%;
+    height: 61%;
+    /* background-color: #4caf9e; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.texInput input{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    outline: none;
+
+    color: rgb(105, 105, 105);
+
+    border: 0.5px solid rgb(203, 203, 203);
+    border-radius: 4px;
+}
+
+.texInput select{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    outline: none;
+
+    color: rgb(105, 105, 105);
+
+    border: 0.5px solid rgb(203, 203, 203);
+    border-radius: 4px;
+}
+
+/* 头像 */
+.inputCommon .imgInput{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    /* background-color: #4caf9e; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imgInput img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.imgInput input{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* 大文本 */
+.input textarea{
+    outline: none;
+    width: 100%;
+    min-height: 100px; /* 最小高度 */
+    max-height: 400px; /* 可选：限制最大高度，避免拉得太长 */
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    /* 1. 仅允许垂直拉伸（关键1） */
+    resize: vertical;
+    /* 2. 取消默认的垂直居中，让顶部固定（关键2） */
+    position: static; /* 重置定位为默认 */
+    transform: none; /* 清空可能的位移 */
+    /* 3. 保证滚动条正常，不影响拉伸 */
+    overflow: auto;
+    box-sizing: border-box; /* 避免padding撑大宽度 */
+}
+
+
+
+

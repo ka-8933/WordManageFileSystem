@@ -1,0 +1,833 @@
+body {
+    margin: 0px;
+    /* display:flex; */
+    background-color: rgba(185, 185, 185, 0.046);
+}
+
+@keyframes beginningAni {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.onclickSizeBarHome {
+    background-color: white;
+    box-shadow: 0px 2px 9px rgba(151, 151, 151, 0.393);
+    /* color: rgb(43, 150, 98); */
+}
+
+.line {
+    position: relative;
+    width: 280px;
+    height: 1.3px;
+    background-color: rgba(184, 184, 184, 0.356);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* 侧边栏设置 */
+.sideMainBar {
+    position: fixed;
+    width: 280px;
+    height: 927px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    margin-left: 0.1%;
+    border: 0.3px solid rgba(199, 199, 199, 0.475);
+    box-shadow: 0px 1px 10px rgba(161, 161, 161, 0.596);
+}
+
+/* 头部设置 */
+.sideMainBar .headMainBar {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    /* border-bottom: 1.5px solid rgba(184, 184, 184, 0.356); */
+}
+
+/* logo和文字 */
+.headMainBar .logoAndTextMainBar {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* logo */
+.logoAndTextMainBar .logoMainBar {
+    position: relative;
+    width: 15%;
+    height: 67%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 0.4px solid rgba(41, 41, 41, 0.708);
+}
+
+.logoMainBar img {
+    width: 100%;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.logoMainBar img:hover {
+    transform: rotate(420deg);
+}
+
+/* 名称 */
+.logoAndTextMainBar .nameMainBar {
+    position: relative;
+    width: 82%;
+    height: 100%;
+    /* background-color: rgb(142, 220, 214); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.nameMainBar h1 {
+    font-size: 19px;
+    color: rgb(28, 28, 28);
+    font-weight: 600;
+}
+
+/* 设置 */
+.headMainBar .setMainBar {
+    position: relative;
+    width: 9%;
+    height: 50%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.setMainBar button {
+    position: relative;
+    /* background-color: blueviolet; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: rgba(234, 234, 234, 0.781);
+    transition: 0.3s;
+}
+
+.setMainBar button:hover {
+    border: 0.7px solid rgb(218, 172, 252);
+}
+
+.setMainBar button img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.sideMainBar .searchMainBar {
+    position: relative;
+
+}
+
+.sideMainBar .headInput {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /* background-color: rgb(182, 231, 216); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.headInput .inputMainBar {
+    position: relative;
+    width: 85%;
+    height: 80%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: beginningAni 0.8s ease forwards;
+    visibility: visible;
+}
+
+.inputMainBar input {
+    position: relative;
+    width: 100%;
+    height: 88%;
+    border-radius: 7px;
+    outline: none;
+    border: 0.3px solid rgba(201, 201, 201, 0.795);
+    box-shadow: 0px 0px 4px rgba(172, 172, 172, 0.352);
+    line-height: 50px;
+    padding-left: 14%;
+    transition: 0.3s;
+}
+
+.inputMainBar input:focus {
+    border: 0.3px solid rgba(112, 112, 112, 0.598);
+    animation: inputvivid 1s ease 0s forwards;
+    visibility: visible;
+}
+
+@keyframes inputvivid {
+    0% {
+        box-shadow: 0px 0px 0px;
+    }
+
+    33% {
+        box-shadow: 0px 0px 10px rgba(132, 229, 192, 0.598);
+    }
+
+    66% {
+        box-shadow: 0px 0px 8px rgba(132, 229, 192, 0.598);
+    }
+
+    100% {
+        box-shadow: 0px 0px 4px rgba(132, 229, 192, 0.598);
+    }
+}
+
+@keyframes inputvivid {
+    0% {
+        box-shadow: 0px 0px 0px;
+    }
+
+    33% {
+        box-shadow: 0px 0px 10px rgba(192, 132, 229, 0.598);
+    }
+
+    66% {
+        box-shadow: 0px 0px 8px rgba(187, 132, 229, 0.598);
+    }
+
+    100% {
+        box-shadow: 0px 0px 2px rgba(95, 22, 150, 0.598);
+    }
+}
+
+
+
+.inputMainBar input::placeholder {
+    color: rgb(103, 103, 103);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.inputMainBar .inputMainBar_button {
+    position: absolute;
+    width: 20%;
+    height: 75%;
+    margin-left: 76%;
+    border-radius: 6px;
+    border: none;
+    background-color: rgba(199, 232, 221, 0.861);
+    box-shadow: 0px 0px 6px rgba(186, 186, 186, 0.468);
+    transition: 0.3s;
+    color: rgb(51, 51, 51);
+}
+
+.inputMainBar .inputMainBar_button:hover {
+    background: linear-gradient(to right, rgba(113, 219, 178, 0.598), rgba(231, 247, 240, 0.598));
+    color: rgb(30, 129, 92);
+    transform: translateY(-1px);
+    box-shadow: 0px 1px 5px rgba(115, 115, 115, 0.468);
+}
+
+.inputMainBar .inputMainBar_button:active {
+    transform: scale(90%);
+
+}
+
+.inputMainBar img {
+    position: absolute;
+    width: 6.5%;
+    height: auto;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -85%;
+    /* top: -0.5px; */
+    margin-top: -2px;
+}
+
+/* 侧边栏第二主栏 */
+.sideMainBar .bodyMainBar {
+    position: relative;
+    /* background-color: rgb(205, 226, 226); */
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 43%;
+
+}
+
+.bodyMainBar .advMainBar {
+    position: relative;
+    width: 85%;
+    height: 55px;
+    /* background: rgb(227, 174, 174); */
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 17px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(157, 157, 157, 0.418);
+    animation: beginningAni 0.8s ease 0.05s forwards;
+    visibility: visible;
+
+    /* 不定期动态 */
+    animation: advMainBar_ani 1.5s ease 1s 1000000 forwards;
+    visibility: visible;
+}
+
+@keyframes advMainBar_ani {
+    0% {
+        box-shadow: 0px 0px 10px rgba(157, 157, 157, 0.418);
+    }
+
+    50% {
+        box-shadow: 2px 1px 23px rgba(140, 83, 204, 0.356);
+    }
+
+    100% {
+        box-shadow: 0px 0px 10px rgba(157, 157, 157, 0.418);
+    }
+}
+
+.advMainBar .advMainBar_leftMainBar {
+    position: relative;
+    width: 50%;
+    height: 75%;
+    /* background-color: beige; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.advMainBar_leftMainBar .imgBar {
+    position: relative;
+    width: 35%;
+    height: 100%;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.imgBar img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.advMainBar_leftMainBar .textBar {
+    position: relative;
+    width: 65%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    line-height: 20px;
+}
+
+.textBar p {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.bodyMainBar .chooseMainBar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.bodyMainBar .chooseMainBar ul {
+    width: 87%;
+    height: auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(211, 211, 238); */
+    /* margin-right: 50px; */
+    gap: 2px;
+    margin: 0px;
+    margin-left: 5px;
+
+}
+
+.bodyMainBar .chooseMainBar ul li {
+    margin: 0px;
+    animation: beginningAni 0.8s ease 0.2s forwards;
+    visibility: visible;
+}
+
+.bodyMainBar .chooseMainBar ul li a {
+    margin: 0px;
+    text-decoration: none;
+}
+
+.bodyMainBar .chooseMainBar ul li button {
+    width: 100%;
+    height: 37px;
+    margin-left: -25px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    /* background-color: white; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: rgba(244, 244, 244, 0.502); */
+    background: none;
+    transition: 0.15s;
+
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 610;
+    color: rgb(83, 82, 82);
+}
+
+.bodyMainBar .chooseMainBar ul li button p {
+    margin-left: 10px;
+
+}
+
+.bodyMainBar .chooseMainBar ul li button:hover {
+    background-color: white;
+    box-shadow: 0px 2px 6px rgba(178, 178, 178, 0.568);
+    color: rgba(77, 14, 148, 0.737);
+}
+
+.bodyMainBar .chooseMainBar ul li button img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+
+}
+
+.bodyMainBar .chooseMainBar ul li button h4 {
+    margin-left: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 610;
+    color: rgb(83, 82, 82);
+}
+
+.chooseMainBar h4 {
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    /* margin: 15px; */
+    color: rgb(123, 122, 122);
+}
+
+/* 底部广告栏 */
+.bodyMainBar .botton_Adv_MainBar {
+    position: relative;
+    width: 92%;
+    height: 180px;
+    background: linear-gradient(to top, white, white, rgba(209, 221, 235, 0.429));
+    margin-top: 250px;
+    border-radius: 3px;
+    text-align: start;
+    /* padding: 4px; */
+    /* padding-left: 20px; */
+    justify-content: flex-start;
+    /* padding-top: 10px; */
+    flex-direction: column;
+    color: rgb(50, 50, 50);
+    /* line-height: 4px; */
+    /* gap: 4px; */
+    text-align: justify;
+    box-shadow: 0px 5px 6px rgba(110, 110, 110, 0.473);
+    animation: beginningAni 0.8s ease 0.35s forwards;
+    visibility: visible;
+}
+
+
+.botton_Adv_MainBar_TextMainBar p {
+    margin-left: 20px;
+    margin: 0px;
+}
+
+.botton_Adv_MainBar_TextMainBar h4 {
+    margin-bottom: 0px;
+    margin-top: 15px;
+}
+
+.botton_Adv_MainBar_TextMainBar h5 {
+    margin-top: 10px;
+    color: rgb(96, 96, 96);
+}
+
+.botton_Adv_MainBar .botton_Adv_MainBar_TextMainBar {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    /* background-color: rgb(193, 161, 224); */
+    text-align: start;
+    /* padding: 4px; */
+    /* padding-left: 20px; */
+    justify-content: flex-start;
+    /* padding-top: 10px; */
+    flex-direction: column;
+    color: rgb(50, 50, 50);
+    /* line-height: 4px; */
+    /* gap: 4px; */
+    text-align: justify;
+    padding-left: 15px;
+}
+
+.botton_Adv_MainBar .botton_Adv_MainBar_EntryMainBar {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    /* border: 0.3px solid rgba(199, 199, 199, 0.475); */
+    /* left: -1px; */
+    box-shadow: 0px 5px 1px rgba(239, 239, 239, 0.596);
+    border-radius: 0px 0px 7px 7px;
+}
+
+/* rgb(221, 237, 250) */
+.botton_Adv_MainBar_EntryMainBar a {
+    position: relative;
+    width: 83%;
+    height: 70%;
+    /* background-color: rgb(221, 237, 250); */
+    background: linear-gradient(to left, rgb(221, 237, 250), rgb(160, 199, 231));
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(82, 82, 82);
+    font-weight: 580;
+    box-shadow: 0px 2px 9px rgba(133, 133, 133, 0.441);
+    transition: 0.2s;
+}
+
+.botton_Adv_MainBar_EntryMainBar a:hover {
+    /* background-color: rgb(156, 187, 211); */
+    transform: translateY(-3px);
+    box-shadow: 0px 2px 14px rgba(78, 78, 78, 0.441);
+}
+
+
+/* 抽查主内容 */
+/* 抽查主内容 */
+/* 抽查主内容 */
+/* 抽查主内容 */
+/* 抽查主内容 */
+/* 抽查主内容 */
+/* 抽查主内容 */
+/* 抽查主内容 */
+
+.checkMainBar {
+    position: relative;
+    width: 81%;
+    height: auto;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 19%;
+}
+
+/* 抽查容器 */
+
+.checkMainBar .checkBox {
+    position: relative;
+    width: 64%;
+    height:auto;
+    /* background-color: rgba(50, 133, 135, 0.438); */
+    background-color: white;
+    box-shadow: 0px 5px 19px rgba(186, 186, 186, 0.553);
+    border-radius: 13px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 6%;
+    margin-left: -1%;
+    animation: beginningAni 0.8s ease forwards;
+    visibility: visible;
+
+}
+
+/* 顶部内容栏 */
+.checkBox .checkBox_topContentBar{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0px;
+
+}
+
+.checkBox_topContentBar h3{
+    margin-left: 30px;
+}
+
+.checkBox_topContentBar .rightAndTotalMainBar{
+    position: relative;
+    width: 16%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 67%;
+    gap: 30px;
+}
+
+.rightAndTotalMainBar .rightAndTotalDispaly{
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background-color: rgba(229, 229, 229, 0.53);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 50px;
+    gap: 10%;
+}
+
+.rightAndTotalDispaly img{
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+
+}
+
+
+/* 单词展示栏 */
+.checkBox .wordDispalyMainBarImgBar{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /* background-color: rgb(220, 236, 250); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wordDispalyMainBarImgBar img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 16px;
+    filter: contrast(100%);
+}
+
+.checkBox .wordDispalyMainBarTextBar{
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    /* background-color: rgb(220, 236, 250); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.checkBox .wordDispalyMainBarTextBar h1{
+    margin: 0px;
+
+}
+
+.checkBox .wordDispalyMainBarTextBar h2{
+    margin: 0px;
+
+}
+
+.checkBox .wordDispalyMainBarTextBar h3{
+    margin: 0px;
+
+}
+
+.checkBox .wordDispalyMainBarTextBar h5{
+    margin: 0px;
+
+}
+
+.checkBox .inputMeaningMainBar{
+    position: relative;
+    width: 100%;
+    height: 90px;
+    /* background-color: rgb(189, 240, 223); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputMeaningMainBar .inputMeaningMainBar_up{
+    position: relative;
+    width: 100%;
+    height: 35%;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.inputMeaningMainBar .inputMeaningMainBar_up h5{
+    margin: 0px;
+    margin-left: 6%;
+    font-weight: 400;
+}
+
+.inputMeaningMainBar .inputMeaningMainBar_botton{
+    position: relative;
+    width: 100%;
+    height: 65%;
+    /* background-color: rgb(205, 141, 141); */
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputMeaningMainBar_botton input{
+    width: 72%;
+    height: 70%;
+    background: white;
+    background-color: rgba(240, 240, 240, 0.269);
+    border: 1.2px solid rgba(7, 116, 140, 0.674);
+    border-radius: 9px;
+    margin-left: 5%;
+    outline: none;
+    padding-left: 20px;
+    transition: 0.1s;
+}
+
+.inputMeaningMainBar_button input::placeholder{
+    color: rgba(111, 111, 111, 0.895);
+    font-size: 17px;
+    font-weight: 500;
+
+}
+
+.inputMeaningMainBar_button input:focus{
+    border: 0.3px solid rgba(112, 112, 112, 0.598);
+    animation: inputvivid 1s ease 0s forwards;
+    visibility: visible;
+}
+
+.inputMeaningMainBar_botton button{
+    width: 110px;
+    height: 75%;
+    background-color: rgba(9, 125, 125, 0.808);
+    color: white;
+    border: none;
+    margin-left: 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    box-shadow: 0px 1px 13px rgba(153, 153, 153, 0.502);
+}
+
+.inputMeaningMainBar_botton button:hover{
+    transform: scale(1.04);
+    background-color: rgba(12, 101, 101, 0.648);
+    box-shadow: 0px 1px 13px rgba(153, 153, 153, 0.502);
+}
+
+/* 按钮栏 */
+.checkBox .buttonMainBar{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    /* background-color: rgb(214, 190, 236); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2%;
+    margin-bottom: 30px;
+
+}
+
+.buttonMainBar button{
+    width: 29%;
+    height: 80%;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 9px;
+    box-shadow: 0px 1px 12px rgba(185, 185, 185, 0.701);
+    transition: 0.3s;
+
+}
+
+.buttonMainBar button:hover{
+    transform: scale(1.04);
+    background-color: rgba(12, 101, 101, 0.648);
+    box-shadow: 0px 1px 13px rgba(153, 153, 153, 0.502);
+
+}
+
+
+
+
+
+
+
+

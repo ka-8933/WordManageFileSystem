@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css"> <!-- 保留你的外部CSS，或内联到下方style标签 -->
+    <title>·小卡单词文档网 - 登录</title>
+    <!-- （可选）内联CSS：如需彻底单文件，粘贴Login.css内容到这里 -->
+    <style>
+        /* 可粘贴Login.css的所有样式，示例：
+        body { margin: 0; padding: 0; }
+        .backgroud { width: 100vw; height: 100vh; position: relative; }
+        .loginMainBar { display: flex; margin: 0 auto; width: 900px; }
+        ... 其他样式 ...
+        */
+    </style>
+</head>
+<body>
+<div class="backgroud">
+    <img src="../home_Img/屏幕截图%202025-12-22%20142437.png" alt="">
+    <div class="coverbackgroud">
+        <div class="loginMainBar">
+            <div class="leftMainBar">
+                <img src="../home_Img/微信图片_20251222145115_203_2.jpg" alt="" style="filter: contrast(80%);">
+            </div>
+            <div class="rightMainBar">
+                <div class="introductionTextMainBar"><h4>·小卡单词文档网 / 登录</h4></div>
+                <div class="inputMainBar">
+                    <form id="loginForm">
+                        <div>
+                            <label for="username">用户名：</label>
+                            <input type="text" id="username" placeholder="输入用户名..." name="username">
+                        </div>
+                        <div style="margin-left: 15px;">
+                            <label for="password">密码：</label>
+                            <input type="password" id="password" placeholder="输入密码..." name="password">
+                        </div>
+                        <div class=""></div>
+                        <div class="loginAndEmrollBar">
+                                <span class="submitonButton_span">
+                                    <button type="button" id="loginBtn">登录</button>
+                                </span>
+                            <a href="register.html">注册</a> <!-- 替换为你的注册页地址 -->
+                        </div>
+                    </form>
+                </div>
+                <div class="line"></div>
+                <div class="antherLoginMainBar">
+                    <a href="javascript:;" class="thirdLogin" data-type="wechat">
+                        <img src="../home_Img/微信.png" alt="微信登录">
+                    </a>
+                    <a href="javascript:;" class="thirdLogin" data-type="qq">
+                        <img src="../home_Img/qq.png" alt="QQ登录" style="width: 30px;height: 30px;">
+                    </a>
+                    <a href="javascript:;" class="thirdLogin" data-type="github">
+                        <img src="../home_Img/github.png" alt="GitHub登录">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 内联JS，适配后端实际响应格式 -->
+<script src="../javaScript/login.js"></script>
+</body>
+</html>
