@@ -36,6 +36,6 @@ logging:
 aliyun:
   oss:
     endpoint : oss-cn-beijing.aliyuncs.com
-    accessKeyId : LTAI5tMHtsAAT9Cwu49Js7Ht
-    accessKeySecret : FrxrzH312SJqXUFkP85Cd4bCc77bHa
+    accessKeyId : LTAI5t6r8S7YjehiYw4Bj2S
+    accessKeySecret : CmrORt3fjmPPPgApvVa898VTEcneto
     bucketName : java-web-xiaoka

@@ -80,9 +80,8 @@ public class ReportImpl implements ReportService {
 
     //将原始数据转化为int[] 类型
     private int[] originalDataToIntArray(OverLookOriginalData overLookOriginalData){
-        int[] newArrary = new int[]{overLookOriginalData.getWordTotal() , overLookOriginalData.getUserAccuracyAvg()
-                , Integer.parseInt("0"), overLookOriginalData.getUserTotal()};
-        return newArrary;
+        return new int[]{overLookOriginalData.getWordTotal() , overLookOriginalData.getUserAccuracyAvg()
+                , 0 , overLookOriginalData.getUserTotal()};
     }
 
     /*获得数据库表 report_date 单一数据*/
