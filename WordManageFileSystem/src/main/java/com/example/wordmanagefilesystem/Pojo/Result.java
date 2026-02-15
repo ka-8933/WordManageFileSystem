@@ -30,6 +30,14 @@ public class Result<T> {
         return result;
     }
 
+    public static Result success(List<Word> words) {
+        Result result = new Result();
+        result.setCode(500);
+        result.setMsg(null);
+        result.setData(words);
+        return result;
+    }
+
     //setting数据
     public Result settingSuccess(SettingBody data){
         Result result = new Result();

@@ -509,13 +509,14 @@ public class WordImpl implements WordService {
      * 单词查询处理：
      * */
     @Override
-    public List<Word> queryWordByCondition(QueryWordBody queryWordBody) {
+    public List<Word> queryWordByCondition(QueryWordBody queryWordBody , Integer userId) {
         Integer start = (queryWordBody.getPage() - 1) * queryWordBody.getSize();
         List<Word> words = wordMapper.queryWordByCondition(queryWordBody.getWord(), queryWordBody.getMeaning()
-                , queryWordBody.getWordClass(), queryWordBody.getSelectDegrad(), queryWordBody.getUserId()
-                , start, queryWordBody.getSize());
-        if (CheckValidUtil.isValid(words)) {
-            return null;
+                , queryWordBody.getWordClass(), queryWordBody.getSelectDegrad(), userId, start,
+                queryWordBody.getSize());
+        log.info("根据英文查询单词为：{}" , words);
+        if (words == null || words.isEmpty()) {
+            throw new RuntimeException("根据英文查询单词为null！！");
         }
         return words;
     }

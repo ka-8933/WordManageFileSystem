@@ -1,2 +1,4 @@
-package com.example.wordmanagefilesystem.Service.Implement;public class CheckImpl {
+package com.example.wordmanagefilesystem.Service.Implement;
+
+public class CheckImpl {
 }

@@ -112,9 +112,14 @@ public class WordController {
     /*
     * 根据单词，释义，阶段，词性，分别查询单词*/
     @PostMapping("/queryWord")
-    public Result queryWordByCondition(@RequestBody QueryWordBody queryWordBody){
-        if (CheckValidUtil.isNull(queryWordBody)){
-            return null;
+    public Result queryWordByCondition(@RequestHeader("userToken") String token
+            ,@RequestBody QueryWordBody queryWordBody){
+        if (CheckValidUtil.isValid(token)){
+            throw new RuntimeException("根据单词，释义，阶段，词性，分别查询单词 token为:null！！");
+        }
+        Claims claims = jwtTool.parseToken(token);
+        if (CheckValidUtil.isNull(queryWordBody) || CheckValidUtil.isNull(claims)){
+            throw new RuntimeException("根据单词，释义，阶段，词性，分别查询单词 ，Json或token为null！！");
         }
         Result result = new Result();
         Integer hasSearchTotal = queryWordBody.getPage() * queryWordBody.getSize();
@@ -122,7 +127,7 @@ public class WordController {
             List<Word> words = wordImpl.queryWordByCache(queryWordBody.getMeaning());
             return result.success(words, hasSearchTotal , 1 , 1);
         }else {
-            List<Word> words = wordImpl.queryWordByCondition(queryWordBody);
+            List<Word> words = wordImpl.queryWordByCondition(queryWordBody , (Integer) claims.get("id"));
             return result.success(words, hasSearchTotal , 1 , 1);
         }
     }
@@ -162,13 +167,6 @@ public class WordController {
         Integer wordTotal = wordImpl.getOfficialsQuatity();
         return wordTotal;
     }
-
-
-//    @PostMapping("addPrivateWord")
-//    public Result addWord(@RequestBody Word word , @RequestParam Integer userId){
-//        Word word1 = wordImpl.addPrivateWord(word , userId);
-//
-//    }
 
     /*
      * 得到释义通过单词*/

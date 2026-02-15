@@ -403,11 +403,11 @@ function differentData() {
         })
 }
 
-setInterval(accuracyExhibit, 1000);
-setInterval(getNewWordTotal, 1000);
-setInterval(getWordTotal, 1000);
-setInterval(getMistakeTotal, 1000);
-setInterval(differentData, 1000);
+// setInterval(accuracyExhibit, 1000);
+// setInterval(getNewWordTotal, 1000);
+// setInterval(getWordTotal, 1000);
+// setInterval(getMistakeTotal, 1000);
+// setInterval(differentData, 1000);
 
 
 // 以下是更新/修改单词处理
@@ -545,7 +545,7 @@ function deletePublicWord(id) {
 window.deletePublicWord = deletePublicWord;
 
 //单词查询处理
-const wordDoc = document.getElementById('word');
+var wordDoc = document.getElementById('word');
 var meaningDoc = document.getElementById('meaning');
 var wordClassDoc = document.getElementById('wordClass');
 var selectDegradDoc = document.getElementById('selectDegrad');
@@ -568,20 +568,30 @@ queryAttachConditionDoc.addEventListener('click', async () => {
     const meaningV = meaningDoc.value === "" ? null : meaningDoc.value.trim();
     const wordClassV = wordClassDoc.value === "" ? null : wordClassDoc.value.trim();
     const selectDegradV = null;
+    //传如json
     const queryBody = {
-        userId: userId,
-        page: pageDoc,
-        size: pageSizeDoc,
+        page: parseInt(pageDoc),
+        size: parseInt(pageSizeDoc),
         word: wordV,
         meaning: meaningV,
         wordClass: wordClassV,
         selectDegrad: selectDegradV
     }
+    console.log("我真正发出去的参数：", queryBody);
 
-    const response = await axios.post('http://localhost:8080/word/queryWord', queryBody)
-    const data = response.data;
-    const words = data.data;
-    const getHasSearchTotal = data.hasSearchTotal;
+    const token = localStorage.getItem("token");
+    const response = await axios.post('http://localhost:8080/word/queryWord',
+        queryBody ,
+        {headers : { userToken : token}});
+
+    const dataWord = response.data; //所有数据
+    const words = dataWord.data; //单词集合结果
+    if (!words || words === null){
+        alert("查询单词为null！");
+    }else{
+        alert(words);
+    }
+    const getHasSearchTotal = dataWord.hasSearchTotal;
     var getHasSearchTotalDoc = document.getElementById('hasSearchTotal');
     getHasSearchTotalDoc.innerHTML = getHasSearchTotal;
     wordBaseShowFunc(words);

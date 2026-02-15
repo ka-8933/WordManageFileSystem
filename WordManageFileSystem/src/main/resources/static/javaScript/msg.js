@@ -267,18 +267,18 @@ async function getBaseMsgToInput() {
     const result = response.data;
     const data = result.data;
     //将用户数据渲染给input
-    nameDoc.value = data.name;
-    phoneNumberDoc.value = data.phoneNumber;
+    nameDoc.value = data.name || '';
+    phoneNumberDoc.value = data.phoneNumber || '';
     birthDayDoc.value = data.birthDay;
-    gradeDoc.value = data.grade;
+    gradeDoc.value = data.grade || '';
     genderDoc.value = data.gender;
-    cityDoc.value = data.city;
+    cityDoc.value = data.city || '';
 
     //将图片单独渲染给头像栏
     imgShowDoc.innerHTML = `<img src="${data.img}" alt="">`
 
     //将名字单独渲染给名字栏
-    nameShowDoc.innerHTML = data.name;
+    nameShowDoc.innerHTML = data.name || '';
 }
 
 //开局自动加载

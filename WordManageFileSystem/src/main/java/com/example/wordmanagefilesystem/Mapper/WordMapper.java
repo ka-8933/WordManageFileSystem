@@ -46,8 +46,7 @@ public interface WordMapper {
     //根据单词，释义，阶段，词性，分别查询单词
     @Select("SELECT v.id , v.word , v.meaning , v.part_of_speech , v.belong_grade , v.similar_word , v.phrase ,  wa.accuracy\n" +
             "     , wa.total , wa.is_right FROM public_vocabulary v LEFT JOIN word_accuracy wa ON v.id = wa.word_id AND wa.user_id = #{userId}\n" +
-            "where v.word = #{word} or v.meaning = #{meaning} or v.part_of_speech = #{partOfSpeech} or v.belong_grade = #{belongGrade} \n" +
-            "limit #{start} , #{size}")
+            "where v.word = #{word} or v.meaning = #{meaning} or v.part_of_speech = #{partOfSpeech} or v.belong_grade = #{belongGrade}")
     List<Word> queryWordByCondition(@Param("word") String word , @Param("meaning") String meaning
             , @Param("partOfSpeech") String partOfSpeech , @Param("belongGrade") String belongGrade
             , @Param("userId") Integer userId,@Param("start") Integer start,@Param("size") Integer size);

@@ -26,7 +26,7 @@ public interface WordService {
     public Integer getOfficialsQuatity();
     //数据差异化处理
     public DifferentData yesterdayAndCurrentDataDifferent(Integer userId);
-    public List<Word> queryWordByCondition(QueryWordBody queryWordBody);
+    public List<Word> queryWordByCondition(QueryWordBody queryWordBody , Integer userId);
     public List<Word> queryWordByCache(String meaning);
     //获得随机单词
     public Word checkPublicVocabularyByRanDom();
