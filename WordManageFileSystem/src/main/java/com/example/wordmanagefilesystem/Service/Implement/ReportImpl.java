@@ -175,7 +175,7 @@ public class ReportImpl implements ReportService {
         int dataIndex = 1;
         int newIntArrIndex = 0;
         for (int i = 0; i < data.length; i++) {
-            if (newIntArrIndex == 4){
+            if (newIntArrIndex == data.length - 1){
                 newIntArr[newIntArrIndex] = newData;
                 return newIntArr;
             }
