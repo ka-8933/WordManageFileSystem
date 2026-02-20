@@ -171,19 +171,12 @@ public class ReportImpl implements ReportService {
 
     //换位算法
     private static int[] refreshReplaceAlgorithm(int[] data , Integer newData){
-        int[] newIntArr = new int[data.length];
-        int dataIndex = 1;
-        int newIntArrIndex = 0;
-        for (int i = 0; i < data.length; i++) {
-            if (newIntArrIndex == data.length - 1){
-                newIntArr[newIntArrIndex] = newData;
-                return newIntArr;
-            }
-            newIntArr[newIntArrIndex] = data[dataIndex];
-            newIntArrIndex++;
-            dataIndex++;
+        int i = 1;
+        while (i < data.length){
+            data[i - 1] = data[i];
+            i++ ;
         }
-        return newIntArr;
+        data[i - 1] = newData;
+        return data;
     }
-
 }
