@@ -1,6 +1,3 @@
-
-
-
 // ========== 核心弹窗：极简粉色款（showMiniToast） ==========
 function injectToastStyle() {
     if (document.getElementById('mini-toast-style')) return;
@@ -75,7 +72,7 @@ function injectToastStyle() {
 }
 
 // 极简粉色弹窗函数（保留核心逻辑，样式优化）
-function showMiniToast(content, duration = 4000) {
+function showMiniToast(content, duration = 3000) {
     injectToastStyle();
     // 移除旧弹窗，避免叠加
     const oldToast = document.querySelector('.mini-toast');
@@ -90,4 +87,86 @@ function showMiniToast(content, duration = 4000) {
         toast.remove();
     }, duration);
 }
+
 window.showMiniToast = showMiniToast;
+
+
+//DOC参数
+var timeSelectDoc = document.getElementById('timeSelect');
+var currentWordDoc = document.getElementById('currentWord');
+var userAnswerDoc = document.getElementById('userAnswer');
+var historyListDoc = document.getElementById('historyList');
+
+
+//全局单词数组
+let wordArr = null;
+let curr = null;
+let index = 0;
+
+//开始抽查
+async function startCheck() {
+    const res = await axios.get('http://localhost:8080/check',
+        {params: {pageSize: parseInt(timeSelectDoc.value)}})
+    const result = res.data;
+    wordArr = result.data; //
+    console.log(wordArr);
+    showMiniToast("开始抽查，本次抽查次数为：" + parseInt(timeSelectDoc.value) + "次");
+    currentWordPrint();
+}
+
+function currentWordPrint(){
+    curr = wordArr[index];
+    currentWordDoc.innerHTML = curr.word;
+}
+
+function shut(){
+    curr = null;
+    index = 0;
+    currentWordDoc.innerHTML = "请点击开始";
+    showMiniToast("已经结束本次抽查！！");
+    historyListDoc.innerHTML = ``;
+}
+
+async function submitAnswer() {
+    if (index >= parseInt(timeSelectDoc.value)) {
+        index = 0;
+        return;
+    }
+    submitionBody = {
+        word : wordArr[index].word,
+        inputMeaning : String(userAnswerDoc.value)
+    };
+
+    const token = localStorage.getItem("token")
+    const res = await axios.put('http://localhost:8080/word/updateAccuracy',
+        submitionBody , {headers : {userToken : token}});
+
+    const result = res.data;
+    const isRight = result.right;
+    console.log(isRight);
+    clearInput();
+    if (isRight === true){
+        showMiniToast("回答正确！！");
+        var row = ` <div class='history-item' >
+            ${wordArr[index].word} —— <span style='color:green'>${userAnswerDoc.value}</span>（正确：${wordArr[index].meaning}）
+            </div>`;
+        historyListDoc.innerHTML += row;
+
+    }else{
+        showMiniToast("回答错误！！");
+        var row = ` <div class='history-item' > 
+            ${wordArr[index].word} —— <span style='color:red'>${userAnswerDoc.value}</span>（正确：${wordArr[index].meaning}）
+            </div>`;
+        historyListDoc.innerHTML += row;
+    }
+
+    index++;
+    currentWordPrint();
+}
+
+function clearInput(){
+    userAnswerDoc.value = "";
+    userAnswerDoc.focus();
+}
+
+

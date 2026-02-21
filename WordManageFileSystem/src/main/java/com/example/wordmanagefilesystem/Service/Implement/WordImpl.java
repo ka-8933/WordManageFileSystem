@@ -46,11 +46,11 @@ public class WordImpl implements WordService {
 
     /*
      * 缓存根据单词查询释义的map集合key为id*/
-    private static Map<Integer, Word> wordCacheKeyId = new ConcurrentHashMap<>();
+    public static Map<Integer, Word> wordCacheKeyId = new ConcurrentHashMap<>();
 
     /*
      * 单词抽查有序缓存*/
-    private static Map<Integer, Word> checkCacheKeyAuto = new ConcurrentHashMap<>();
+    public static Map<Integer, Word> checkCacheKeyAuto = new ConcurrentHashMap<>();
 
     //调用通用工具类
     private static CommonTool commonTool = new CommonTool();

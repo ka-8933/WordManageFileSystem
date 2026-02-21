@@ -163,6 +163,17 @@ public class Result<T> {
         return result;
     }
 
+
+    public Result<T> success(Word[] words){
+        Result result = new Result();
+        result.setCode(200);
+        result.setHasSearchTotal(null);
+        result.setMsg("已查询或已成功！");
+        result.setData(words);
+        return result;
+    }
+
+
     public Result<T> success(String string){
         Result result = new Result();
         result.setCode(200);

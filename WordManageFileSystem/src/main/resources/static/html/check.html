@@ -98,8 +98,8 @@
         <div class="quiz-card">
             <div class="quiz-title">
                 <select name="" id="timeSelect">
-                    <option value="" selected>自定义</option>
-                    <option value="25">25次</option>
+                    <option value="">自定义</option>
+                    <option value="25" selected>25次</option>
                     <option value="50">50次</option>
                     <option value="75">75次</option>
                     <option value="100">100次</option>
@@ -111,22 +111,19 @@
                 <span>正确：<span id="correct">0</span></span>
                 <span>正确率：<span id="rate">33%</span></span>
             </div>
-            <div class="quiz-word" id="currentWord">apple</div>
+            <div class="quiz-word" id="currentWord">请点击开始</div>
             <input type="text" class="quiz-answer-input" id="userAnswer" placeholder="请输入中文意思" autocomplete="off">
             <div class="quiz-btn-group">
+                <button class="quiz-btn btn-danger" onclick="startCheck()">立即开始</button>
+                <button class="quiz-btn btn-success" onclick="nextWord()">下一个</button>
+                <button class="quiz-btn btn-warning" onclick="shut()">结束本次</button>
                 <button class="quiz-btn btn-primary" onclick="submitAnswer()">提交答案</button>
-                <button class="quiz-btn btn-success" onclick="nextWord()">下一题</button>
-                <button class="quiz-btn btn-warning" onclick="showAnswer()">显示答案</button>
-                <button class="quiz-btn btn-danger" onclick="resetQuiz()">重新开始</button>
             </div>
         </div>
 
         <div class="history-card">
             <div class="history-title">已抽查单词</div>
             <div id="historyList">
-                <div class='history-item'>
-                    apple —— <span style='color:red'>苹果</span>（正确：苹果）
-                </div>
             </div>
         </div>
     </div>
